@@ -1,5 +1,10 @@
 {
     "Home": {
       "title": "Hello World!"
+    },
+    "Header": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects"
     }
   }

@@ -1,3 +1,6 @@
+import aspectRatio from "@tailwindcss/aspect-ratio";
+import typography from "@tailwindcss/typography";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -7,12 +10,29 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }  
+        }
       },
+      animation: {
+        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
+      }
     },
   },
-  plugins: [],
+  plugins: [aspectRatio, typography],
 }
