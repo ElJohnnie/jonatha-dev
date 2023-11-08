@@ -1,6 +1,3 @@
-import aspectRatio from "@tailwindcss/aspect-ratio";
-import typography from "@tailwindcss/typography";
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -12,27 +9,26 @@ module.exports = {
     extend: {
       keyframes: {
         typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden"
+          '0%': {
+            width: '0%',
+            visibility: 'hidden',
           },
-          "100%": {
-            width: "100%"
-          }  
+          '100%': {
+            width: '100%',
+          },
         },
         blink: {
-          "50%": {
-            borderColor: "transparent"
+          '50%': {
+            borderColor: 'transparent',
           },
-          "100%": {
-            borderColor: "white"
-          }  
-        }
+          '100%': {
+            borderColor: 'white',
+          },
+        },
       },
       animation: {
-        typing: "typing 2s steps(20) infinite alternate, blink .7s infinite"
-      }
+        typing: 'typing 2s steps(20) infinite alternate, blink .7s infinite',
+      },
     },
   },
-  plugins: [aspectRatio, typography],
-}
+};

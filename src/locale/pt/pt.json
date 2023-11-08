@@ -1,10 +1,16 @@
 {
-    "Home": {
-      "title": "Olá mundo!"
-    },
-    "Header": {
-      "home": "Home",
-      "about": "Sobre",
-      "projects": "Projetos"
-    }
+  "Home": {
+    "title": "Olá mundo!"
+  },
+  "About": {
+    "title": "Sobre"
+  },
+  "Projects": {
+    "title": "Projetos"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "Sobre",
+    "projects": "Projetos"
   }
+}

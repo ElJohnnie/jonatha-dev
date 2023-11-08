@@ -1,10 +1,16 @@
 {
-    "Home": {
-      "title": "Hello World!"
-    },
-    "Header": {
-      "home": "Home",
-      "about": "About",
-      "projects": "Projects"
-    }
+  "Home": {
+    "title": "Hello World!"
+  },
+  "About": {
+    "title": "About"
+  },
+  "Projects": {
+    "title": "Projects"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects"
   }
+}
