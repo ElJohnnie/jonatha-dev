@@ -10,9 +10,9 @@ export default function Home() {
         <h1 className='animate-typing overflow-hidden whitespace-nowrap border-r-4 border-r-white pr-5 text-5xl font-bold text-white'>
           {t('title')}
         </h1>
-        <h2 className='text-primary mb-0 mt-5 px-3 text-xl font-semibold lg:text-2xl'>
+        {/* <h2 className='text-primary mb-0 mt-5 px-3 text-xl font-semibold lg:text-2xl'>
           {t('title')}
-        </h2>
+        </h2> */}
       </div>
     </main>
   );
