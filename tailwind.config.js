@@ -19,7 +19,7 @@ module.exports = {
         },
         blink: {
           '50%': {
-            borderColor: 'transparent',
+            borderColor: '',
           },
           '100%': {
             borderColor: 'white',
@@ -27,7 +27,7 @@ module.exports = {
         },
       },
       animation: {
-        typing: 'typing 2s steps(20) infinite alternate, blink .7s infinite',
+        typing: 'typing 3s steps(20) infinite alternate, blink .7s infinite',
       },
     },
   },
