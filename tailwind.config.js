@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      padding: {
+        'nav-height-desktop': 'var(--space-navHeightDesktop)',
+        'nav-height-mobile': 'var(--space-navHeightMobile)',
+      },
       keyframes: {
         typing: {
           '0%': {
