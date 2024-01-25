@@ -1,6 +1,7 @@
 {
   "Home": {
-    "title": "Under development!"
+    "title": "Under development!",
+    "description": "Test"
   },
   "About": {
     "title": "Under development!"
@@ -12,5 +13,9 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects"
+  },
+  "Social": {
+    "github": "https://github.com/ElJohnnie",
+    "linkedin": "https://www.linkedin.com/in/jonatha-follmer/"
   }
 }
