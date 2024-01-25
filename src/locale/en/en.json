@@ -13,5 +13,9 @@
     "home": "Home",
     "about": "About",
     "projects": "Projects"
+  },
+  "Social": {
+    "github": "https://github.com/ElJohnnie",
+    "linkedin": "https://www.linkedin.com/in/jonatha-follmer/"
   }
 }

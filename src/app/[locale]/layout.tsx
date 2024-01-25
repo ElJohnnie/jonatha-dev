@@ -2,6 +2,7 @@ import { NavHeader } from '../../components/Navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
+import { Footer } from '@/components/Footer/Footer';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'pt' }];
@@ -29,6 +30,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <NavHeader></NavHeader>
           {children}
+          <Footer></Footer>
         </NextIntlClientProvider>
       </body>
     </html>
