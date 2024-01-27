@@ -21,28 +21,28 @@ export default function NavHeader() {
         href: '/',
         current: pathname === '/',
       },
-      // {
-      //   label: t('about'),
-      //   href: '/about',
-      //   current: pathname === '/about',
-      // },
-      // {
-      //   label: t('projects'),
-      //   href: '/projects',
-      //   current: pathname === '/projects',
-      // },
+      {
+        label: t('about'),
+        href: '/about',
+        current: pathname === '/about',
+      },
+      {
+        label: t('projects'),
+        href: '/projects',
+        current: pathname === '/projects',
+      },
     ];
   }, [t, pathname]);
 
   return (
-    <header className=' absolute top-0 z-10 order-1 mt-3 flex min-h-[60px] w-full flex-row flex-wrap items-center justify-between text-sm'>
-      <Link href='/' className='text-primary pl-5  text-lg font-bold'>
-        <Image src={Logo} alt='Your Company' width={40} height={40} />
-      </Link>
-      <nav className='order-3 mt-4 flex-1 px-5 min-[480px]:order-2 min-[480px]:mt-0'>
-        <ul className=' flex flex-row justify-center min-[480px]:gap-4 '>
+    <header className='w-full absolute top-0 z-10 order-1 mt-3 flex min-h-[60px]'>
+      <nav className='mt-4 flex-1 px-5 min-[480px]:order-2 min-[480px]:mt-0 '>
+        <ul className='flex flex-row justify-normal gap-4 items-center'>
+          <Link href='/' className='text-primary pl-5 text-lg font-bold sm:mr-5 lg:mr-12'>
+            <Image src={Logo} alt='Your Company' width={45} height={45} />
+          </Link>
           {links.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className={classNames(
@@ -54,10 +54,11 @@ export default function NavHeader() {
               aria-current={item.current ? 'page' : undefined}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </ul>
       </nav>
     </header>
   );
+  
 }

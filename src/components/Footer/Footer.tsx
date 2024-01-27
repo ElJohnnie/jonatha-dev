@@ -20,14 +20,14 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className=' text-secondary flex w-full justify-center px-5 text-sm font-medium '>
+    <footer className='text-secondary flex w-full justify-center lg:pl-12 md:pl-6 sm:pl-0 text-sm font-medium w-full'>
       {links.map((link) => (
         <Link
           href={link.href}
           key={link.href}
           aria-label={link.label}
           target='_blank'
-          className='text-secondary hover:text-primary  flex flex-row items-center gap-2 p-5 sm:w-[130px] sm:[&>i]:hidden sm:[&>i]:hover:block'
+          className='text-secondary hover:text-primary flex flex-row items-center gap-2 p-5 sm:w-[130px] sm:[&>i]:hidden sm:[&>i]:hover:block'
         >
           <span className='hidden h-6 sm:block'>{link.label}</span>
           <i>{link.icon}</i>
