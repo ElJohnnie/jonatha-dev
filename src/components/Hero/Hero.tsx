@@ -2,7 +2,7 @@
 'use client';
 interface HeroProps {
   title: string;
-  description: string;
+  description?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({ title, description }) => {
