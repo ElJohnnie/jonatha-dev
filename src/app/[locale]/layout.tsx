@@ -1,4 +1,4 @@
-import { NavHeader } from '../../components/Navigation';
+import { NavHeader } from '@/components/Navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
@@ -28,9 +28,11 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className='h-screen bg-slate-950'>
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <div className="flex min-h-screen flex-col">
           <NavHeader></NavHeader>
-          {children}
-          <Footer></Footer>
+              {children}
+              <Footer />
+            </div>
         </NextIntlClientProvider>
       </body>
     </html>
