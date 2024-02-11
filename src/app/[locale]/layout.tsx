@@ -26,13 +26,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className='h-screen bg-slate-950'>
+      <body className='bg-slate-950'>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className="flex min-h-screen flex-col">
-          <NavHeader></NavHeader>
-              {children}
-              <Footer />
-            </div>
+          <div className='flex min-h-screen flex-col'>
+            <NavHeader></NavHeader>
+            {children}
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

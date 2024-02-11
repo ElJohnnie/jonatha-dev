@@ -20,7 +20,7 @@ export const Footer = () => {
   ];
 
   return (
-    <footer className='text-secondary flex w-full justify-center lg:pl-12 md:pl-6 sm:pl-0 text-sm font-medium w-full'>
+    <footer className='text-secondary flex w-full w-full justify-center text-sm font-medium sm:pl-0 md:pl-6 lg:pl-12'>
       {links.map((link) => (
         <Link
           href={link.href}

@@ -1,7 +1,8 @@
 {
   "Home": {
     "title": "Em desenvolvimento!",
-    "description": "Teste"
+    "description": "Teste",
+    "linkButton": "Projetos"
   },
   "About": {
     "title": "Em desenvolvimento!"
