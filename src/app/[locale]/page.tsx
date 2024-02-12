@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Hero from '@/components/Hero/Hero';
+import { Hero } from '@/components/Sections';
 
 export default function Home() {
   const t = useTranslations('Home');

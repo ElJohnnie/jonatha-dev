@@ -11,6 +11,7 @@ module.exports = {
         'nav-height-desktop': 'var(--space-navHeightDesktop)',
         'nav-height-mobile': 'var(--space-navHeightMobile)',
       },
+      display: ["group-hover"],
       keyframes: {
         typing: {
           '0%': {

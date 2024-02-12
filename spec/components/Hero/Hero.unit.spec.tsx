@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero/Hero';
+import Hero from '@/components/Sections/Hero';
 import { waitFor, render, screen } from '@testing-library/react';
 import { useTranslations } from 'next-intl';
 

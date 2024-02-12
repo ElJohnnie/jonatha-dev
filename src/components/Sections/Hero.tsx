@@ -3,6 +3,7 @@
 
 import Image from 'next/image';
 import AnimateButton from '../Buttons/AnimateButton';
+
 interface HeroProps {
   title: string;
   description?: string;
@@ -48,7 +49,8 @@ const Hero: React.FC<HeroProps> = ({
           <div className='mt-6'></div>
           {linkButton && (
             <AnimateButton
-              title={'Teste de texto'}
+              title={linkButton}
+              route={'/about'}
               icon={
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

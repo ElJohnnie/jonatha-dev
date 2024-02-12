@@ -3,7 +3,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from '@radix-ui/react-icons';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
-export const Footer = () => {
+const Footer = () => {
   const t = useTranslations('Social');
 
   const links = [
@@ -36,3 +36,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
