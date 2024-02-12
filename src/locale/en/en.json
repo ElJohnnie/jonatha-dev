@@ -2,7 +2,11 @@
   "Home": {
     "title": "Under development!",
     "description": "Test",
-    "linkButton": "Projects"
+    "linkButton": "Projects",
+    "architecture": "Software Engineering",
+    "backend": "Backend",
+    "front-end": "Front-end",
+    "ecosystem": "Ecosystem node"
   },
   "About": {
     "title": "Under development!"

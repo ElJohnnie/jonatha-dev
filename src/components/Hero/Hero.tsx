@@ -2,56 +2,83 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+import AnimateButton from '../Buttons/AnimateButton';
 interface HeroProps {
   title: string;
   description?: string;
+  solutions?: string[];
   linkButton?: string;
+  image?: boolean;
 }
 
-const Hero: React.FC<HeroProps> = ({ title, description, linkButton }) => {
+const Hero: React.FC<HeroProps> = ({
+  title,
+  description,
+  solutions,
+  linkButton,
+  image,
+}) => {
   return (
-    <section className='h-100 pt-24'>
+    <section className='h-100 mt-12 pt-24'>
       <div className='mx-auto grid max-w-screen-xl justify-center px-4 py-8 lg:grid-cols-12 lg:py-16'>
-        <div className='mr-auto place-self-center md:col-span-7'>
-          <h1 className='mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight dark:text-white md:text-5xl xl:text-6xl'>
+        <div className='mr-auto place-self-center md:col-span-12'>
+          <h1 className='mb-4 max-w-2xl text-6xl font-extrabold leading-none tracking-tight dark:text-white'>
             <span className='leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline'>
               {title}
             </span>
           </h1>
-          <p className='text-white-600 mb-8 px-0 text-lg md:text-xl lg:px-24'>
-            {description}
-          </p>
+          {/* <!-- Sliding Text animation --> */}
+          {description && (
+            <div className='md:text4xl bg-gradient-to-r from-slate-200/60 to-slate-200 to-50% bg-clip-text text-4xl font-extrabold text-transparent [text-wrap:balance]'>
+              {description}{' '}
+              <span className='inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-indigo-500 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]'>
+                <ul
+                  className={`block animate-text-slide-4 text-left leading-tight [&_li]:block`}
+                >
+                  {solutions &&
+                    solutions.map((solution) => (
+                      <li key={solution}>{solution}</li>
+                    ))}
+                  <li aria-hidden='true'>{solutions && solutions[0]}</li>
+                </ul>
+              </span>
+            </div>
+          )}
+          {/* <!-- End: Sliding Text animation --> */}
+          <div className='mt-6'></div>
           {linkButton && (
-            <Link
-              href='#'
-              className='bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:focus:ring-primary-900 mr-3 inline-flex items-center justify-center rounded-lg px-5 py-3 text-center text-base font-medium text-white focus:ring-4'
-            >
-              {linkButton}
-              <svg
-                className='-mr-1 ml-2 h-5 w-5'
-                fill='currentColor'
-                viewBox='0 0 20 20'
-                xmlns='http://www.w3.org/2000/svg'
-              >
-                <path
-                  fill-rule='evenodd'
-                  d='M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z'
-                  clip-rule='evenodd'
-                ></path>
-              </svg>
-            </Link>
+            <AnimateButton
+              title={'Teste de texto'}
+              icon={
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  strokeWidth={1.5}
+                  stroke='currentColor'
+                  className='h-6 w-6'
+                >
+                  <path
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    d='M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3'
+                  />
+                </svg>
+              }
+            />
           )}
         </div>
-        <div className='hidden lg:col-span-5 lg:mt-0 lg:flex'>
-          <Image
-            className='filter-grayscale'
-            src={'/images/jonatha.jpg'}
-            alt=''
-            width={400}
-            height={400}
-          />
-        </div>
+        {image && (
+          <div className='hidden lg:col-span-3 lg:mt-0 lg:flex'>
+            <Image
+              className='filter-grayscale'
+              src={'/images/jonatha.jpg'}
+              alt=''
+              width={400}
+              height={400}
+            />
+          </div>
+        )}
       </div>
     </section>
   );
