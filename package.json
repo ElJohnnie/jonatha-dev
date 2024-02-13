@@ -7,9 +7,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
+    "lint:fix": "next lint --fix",
+    "test:watch": "jest --watch",
+    "test:unit": "jest --silent",
     "prettier": "prettier --check --ignore-path .gitignore .",
-    "prettier:fix": "prettier --write --ignore-path .gitignore ."
+    "prettier:fix": "prettier --write --ignore-path .gitignore .",
+    "prepare": "husky install",
+    "format": "prettier --write \"{src,tests}/*/.{ts,tsx}\"",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",
