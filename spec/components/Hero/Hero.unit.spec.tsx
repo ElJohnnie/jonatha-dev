@@ -1,9 +1,8 @@
-import Hero from '@/components/Sections/Hero';
-import { waitFor, render, screen } from '@testing-library/react';
-import { useTranslations } from 'next-intl';
+import { Hero } from '@/components/Sections';
+import {  render, } from '@testing-library/react';
 
 jest.mock('next-intl', () => ({
-  useTranslations: (key) => key,
+  useTranslations: (key: any) => key,
 }));
 
 const heroMockup = {
@@ -12,8 +11,8 @@ const heroMockup = {
 };
 
 describe('should render correctly Hero component', () => {
-  it('render', () => {
-    const component = render(<Hero {...heroMockup}></Hero>);
-    expect(component).toBeTruthy();
+  it('match snapshot', () => {
+    const {container} = render(<Hero {...heroMockup}></Hero>);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
