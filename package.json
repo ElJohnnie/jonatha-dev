@@ -11,7 +11,9 @@
     "test:watch": "jest --watch",
     "test:unit": "jest --silent",
     "prettier": "prettier --check --ignore-path .gitignore .",
-    "prettier:fix": "prettier --write --ignore-path .gitignore ."
+    "prettier:fix": "prettier --write --ignore-path .gitignore .",
+    "prepare": "husky install",
+    "pre-commit": "next lint && prettier --check && jest --silent"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.4.2",
@@ -52,7 +54,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "test:unit"
+      "pre-commit": "npm run pre-commit"
     }
   }
 }
