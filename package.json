@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "test:watch": "jest --watch",
-    "unit": "jest --silent",
+    "test:unit": "jest --silent",
     "prettier": "prettier --check --ignore-path .gitignore .",
     "prettier:fix": "prettier --write --ignore-path .gitignore .",
     "prepare": "husky install"

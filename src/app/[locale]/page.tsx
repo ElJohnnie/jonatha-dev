@@ -5,7 +5,7 @@ import { Hero } from '@/components/Sections';
 
 export default function Home() {
   const t = useTranslations('Home');
-  
+
   const solutions = [
     t('architecture'),
     t('back-end'),
