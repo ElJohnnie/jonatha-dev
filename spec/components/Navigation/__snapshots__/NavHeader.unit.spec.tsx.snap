@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly NavHeader component match snapshot 1`] = `
+<header
+  class="absolute top-0 z-10 order-1 mt-3 flex min-h-[60px] w-full"
+>
+  <nav
+    class="mt-4 flex-1 px-5 min-[480px]:order-2 min-[480px]:mt-0 "
+  >
+    <ul
+      class="flex flex-row items-center justify-normal gap-4"
+    >
+      <a
+        class="text-primary pl-5 text-lg font-bold sm:mr-5 lg:mr-12"
+        href="/"
+      >
+        <img
+          alt="Your Company"
+          data-nimg="1"
+          decoding="async"
+          height="45"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=96&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=48&q=75 1x, /_next/image?url=%2Fimg.jpg&w=96&q=75 2x"
+          style="color: transparent;"
+          width="45"
+        />
+      </a>
+      <a
+        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        href="/"
+      >
+        Header.home
+      </a>
+      <a
+        class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        href="/about"
+      >
+        Header.about
+      </a>
+    </ul>
+  </nav>
+</header>
+`;

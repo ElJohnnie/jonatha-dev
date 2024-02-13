@@ -1,10 +1,6 @@
 import { Hero } from '@/components/Sections';
 import { render } from '@testing-library/react';
 
-jest.mock('next-intl', () => ({
-  useTranslations: (key: any) => key,
-}));
-
 const heroMockup = {
   title: 'any title',
   description: 'any description',
