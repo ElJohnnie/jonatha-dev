@@ -14,13 +14,11 @@ export default function Home() {
   ];
 
   return (
-    <main>
-      <Hero
-        title={t('title')}
-        description={t('description')}
-        solutions={solutions}
-        linkButton={t('linkButton')}
-      ></Hero>
-    </main>
+    <Hero
+      title={t('title')}
+      description={t('description')}
+      solutions={solutions}
+      linkButton={t('linkButton')}
+    ></Hero>
   );
 }

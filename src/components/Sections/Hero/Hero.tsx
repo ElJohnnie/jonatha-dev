@@ -2,7 +2,7 @@
 'use client';
 
 import Image from 'next/image';
-import AnimateButton from '../Buttons/AnimateButton';
+import AnimateButton from '../../Buttons/AnimateButton';
 
 interface HeroProps {
   title: string;
@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({
   image,
 }) => {
   return (
-    <section className='h-100 mt-12 pt-24'>
+    <section className='h-100 mt-8 pt-8'>
       <div className='mx-auto grid max-w-screen-xl justify-center px-4 py-8 lg:grid-cols-12 lg:py-16'>
         <div className='mr-auto place-self-center md:col-span-12'>
           <h1 className='mb-4 max-w-2xl text-6xl font-extrabold leading-none tracking-tight dark:text-white'>
