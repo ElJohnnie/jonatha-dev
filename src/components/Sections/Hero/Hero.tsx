@@ -21,8 +21,8 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   return (
     <section className='h-100 mt-8 pt-8'>
-      <div className='mx-auto grid max-w-screen-xl justify-center px-4 py-8 lg:grid-cols-12 lg:py-16'>
-        <div className='mr-auto mt-[16vh] place-self-center md:col-span-12 md:mt-0'>
+      <div className='max-w-screen- mx-auto grid justify-center px-4 py-12'>
+        <div className='mr-auto mt-[10vh] place-self-center md:col-span-12'>
           <h1 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-6xl'>
             <span className='leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline'>
               {title}
@@ -31,7 +31,7 @@ const Hero: React.FC<HeroProps> = ({
           {/* <!-- Sliding Text animation --> */}
           {description && (
             <div className='md:inline-flex'>
-              <h1 className='text-1xl bg-gradient-to-r from-slate-200/60 to-slate-200 to-50% bg-clip-text font-extrabold tracking-tight text-transparent [text-wrap:balance] md:text-4xl'>
+              <h1 className='text-1xl bg-gradient-to-r from-slate-100 to-slate-200 to-50% bg-clip-text font-extrabold tracking-tight text-transparent [text-wrap:balance] md:text-4xl'>
                 {description}{' '}
               </h1>
               <span className='text-1xl inline-flex h-[calc(theme(fontSize.base)*theme(lineHeight.tight))] flex-col overflow-hidden font-extrabold text-indigo-500 md:ml-1 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:text-4xl'>
@@ -48,6 +48,10 @@ const Hero: React.FC<HeroProps> = ({
             </div>
           )}
           {/* <!-- End: Sliding Text animation --> */}
+
+          <div className='mt-4 flex flex-row justify-center'>
+            <AnimateButton title={linkButton ?? ''} route='/about' />
+          </div>
         </div>
         {image && (
           <div className='hidden lg:col-span-3 lg:mt-0 lg:flex'>

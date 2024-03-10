@@ -19,18 +19,13 @@ export default function NavHeader() {
       {
         label: t('home'),
         href: '/',
-        current: pathname === '/' || pathname === '',
+        current: pathname === '/' || pathname === '' || pathname === '/en',
       },
       {
         label: t('about'),
         href: '/about',
-        current: pathname === '/about',
+        current: pathname === '/about' || pathname === '/en/about',
       },
-      // {
-      //   label: t('projects'),
-      //   href: '/projects',
-      //   current: pathname === '/projects',
-      // },
       // {
       //   label: t('projects'),
       //   href: '/projects',
@@ -55,8 +50,8 @@ export default function NavHeader() {
               href={item.href}
               className={classNames(
                 item.current
-                  ? 'bg-gray-900 text-white'
-                  : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                  ? 'bg-indigo-600 text-white'
+                  : 'text-gray-300 hover:bg-indigo-950 hover:text-white',
                 'rounded-md px-3 py-2 text-sm font-medium'
               )}
               aria-current={item.current ? 'page' : undefined}

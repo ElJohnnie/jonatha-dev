@@ -2,72 +2,35 @@
 
 import { About } from '@/components/Sections';
 import { useTranslations } from 'next-intl';
-import { LockClosedIcon, FaceSmileIcon } from '@heroicons/react/20/solid';
-
-const features = [
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: FaceSmileIcon,
-  },
-];
+import {
+  CodeBracketSquareIcon,
+  AcademicCapIcon,
+} from '@heroicons/react/20/solid';
 
 export default function AboutPage() {
   const t = useTranslations('About');
+  const features = [
+    {
+      name: 'Universidade de Santa Cruz do sul:',
+      description: t('experience-1'),
+      icon: AcademicCapIcon,
+    },
+    {
+      name: 'Front-end Vivo (Telefônica) B2C:',
+      description: t('experience-2'),
+      icon: CodeBracketSquareIcon,
+    },
+    {
+      name: 'Front-end Vivo (Telefônica) B2B:',
+      description: t('experience-3'),
+      icon: CodeBracketSquareIcon,
+    },
+  ];
   return (
     <About
-      title='any'
-      description='any'
-      postDescription='any'
+      title={t('title')}
+      description={t('description')}
+      postDescription={t('post-description')}
       features={features}
       image={true}
     ></About>
