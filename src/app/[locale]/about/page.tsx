@@ -1,12 +1,75 @@
 'use client';
 
+import { About } from '@/components/Sections';
 import { useTranslations } from 'next-intl';
+import { LockClosedIcon, FaceSmileIcon } from '@heroicons/react/20/solid';
 
-export default function Item() {
+const features = [
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: FaceSmileIcon,
+  },
+];
+
+export default function AboutPage() {
   const t = useTranslations('About');
   return (
-    <main className='selection:bg-green flex justify-center overflow-hidden px-10 py-nav-height-desktop selection:text-black lg:w-full'>
-      <>{t('title')}</>
-    </main>
+    <About
+      title='any'
+      description='any'
+      postDescription='any'
+      features={features}
+      image={true}
+    ></About>
   );
 }
