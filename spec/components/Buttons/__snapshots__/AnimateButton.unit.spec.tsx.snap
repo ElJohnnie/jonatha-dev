@@ -2,7 +2,7 @@
 
 exports[`should render correctly AnimateButton component match snapshot 1`] = `
 <a
-  class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-200/60 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
+  class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-100 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
   href="/"
 >
   <span

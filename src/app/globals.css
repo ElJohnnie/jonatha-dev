@@ -17,13 +17,37 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    45deg,
+    #020617,
+    #020617,
+    #020617,
+    #0c1430,
+    #0c1430,
+    #0c1430
+  );
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  height: 100vh;
+  color: rgb(var(--foreground-rgb));
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 25%;
+  }
+  100% {
+    background-position: 0% 25%;
+  }
 }
 
 /* width */
