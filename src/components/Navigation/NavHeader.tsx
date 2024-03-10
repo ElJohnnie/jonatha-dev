@@ -19,13 +19,18 @@ export default function NavHeader() {
       {
         label: t('home'),
         href: '/',
-        current: pathname === '/',
+        current: pathname === '/' || pathname === '',
       },
       {
         label: t('about'),
         href: '/about',
         current: pathname === '/about',
       },
+      // {
+      //   label: t('projects'),
+      //   href: '/projects',
+      //   current: pathname === '/projects',
+      // },
       // {
       //   label: t('projects'),
       //   href: '/projects',
