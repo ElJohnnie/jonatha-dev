@@ -1,17 +1,16 @@
 'use client';
 
 import Link from 'next/link';
+import { AnimateButtonProps } from './types';
 
-interface Props {
-  route: string;
-  title: string;
-  icon?: JSX.Element;
-}
-
-export default function AnimateButton({ route, title, icon }: Readonly<Props>) {
+export default function AnimateButton({
+  route,
+  title,
+  icon,
+}: Readonly<AnimateButtonProps>) {
   return (
     <Link
-      href={route ?? '#'}
+      href={route}
       className='align-center group relative inline-flex items-center justify-center overflow-hidden rounded border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-200/60 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white'
     >
       <span className='ease absolute left-0 top-0 h-0 w-0 border-t-2 border-indigo-500 transition-all duration-200 group-hover:w-full'></span>

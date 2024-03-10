@@ -8,10 +8,10 @@ exports[`should render correctly Hero component match snapshot 1`] = `
     class="mx-auto grid max-w-screen-xl justify-center px-4 py-8 lg:grid-cols-12 lg:py-16"
   >
     <div
-      class="mr-auto place-self-center md:col-span-12"
+      class="mr-auto mt-[16vh] place-self-center md:col-span-12 md:mt-0"
     >
       <h1
-        class="mb-4 max-w-2xl text-6xl font-extrabold leading-none tracking-tight dark:text-white"
+        class="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-6xl"
       >
         <span
           class="leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline"
@@ -20,12 +20,16 @@ exports[`should render correctly Hero component match snapshot 1`] = `
         </span>
       </h1>
       <div
-        class="md:text4xl bg-gradient-to-r from-slate-200/60 to-slate-200 to-50% bg-clip-text text-4xl font-extrabold text-transparent [text-wrap:balance]"
+        class="md:inline-flex"
       >
-        any description
-         
+        <h1
+          class="text-1xl bg-gradient-to-r from-slate-200/60 to-slate-200 to-50% bg-clip-text font-extrabold tracking-tight text-transparent [text-wrap:balance] md:text-4xl"
+        >
+          any description
+           
+        </h1>
         <span
-          class="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-indigo-500 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]"
+          class="text-1xl inline-flex h-[calc(theme(fontSize.base)*theme(lineHeight.tight))] flex-col overflow-hidden font-extrabold text-indigo-500 md:ml-1 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:text-4xl"
         >
           <ul
             class="block animate-text-slide-4 text-left leading-tight [&_li]:block"
@@ -36,9 +40,6 @@ exports[`should render correctly Hero component match snapshot 1`] = `
           </ul>
         </span>
       </div>
-      <div
-        class="mt-6"
-      />
     </div>
   </div>
 </section>

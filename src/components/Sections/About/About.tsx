@@ -1,82 +1,26 @@
-import {
-  CloudArrowUpIcon,
-  LockClosedIcon,
-  ServerIcon,
-} from '@heroicons/react/20/solid';
+import { AboutProps } from './types';
+import Image from 'next/image';
 
-const features = [
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: LockClosedIcon,
-  },
-];
-
-export default function About() {
+const About: React.FC<AboutProps> = ({
+  title,
+  description,
+  postDescription,
+  features,
+  image,
+}) => {
   return (
     <section className='h-100 mt-4 pt-4'>
       <div className='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:py-16'>
-        <div className='mr-auto place-self-center md:col-span-9'>
-          <div className='lg:max-w-lg'>
+        <div className='mr-auto md:col-span-7'>
+          <div className='place-self-center lg:max-w-lg'>
             <h2 className='text-base font-semibold leading-7 text-indigo-600'>
-              Deploy faster
+              {title}
             </h2>
             <p className='mt-2 text-3xl font-bold tracking-tight dark:text-white sm:text-4xl'>
-              A better workflow
+              {description}
             </p>
             <p className='mt-6 text-lg leading-8 text-gray-300'>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis ratione.
+              {postDescription}
             </p>
             <dl className='mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-300 lg:max-w-none'>
               {features.map((feature) => (
@@ -94,8 +38,22 @@ export default function About() {
             </dl>
           </div>
         </div>
-        <div className='hidden md:col-span-3 lg:mt-0 lg:flex'></div>
+        <div className='mr-auto md:col-span-5'>
+          {image && (
+            <div className='h-auto place-self-center sm:hidden lg:mt-0 lg:flex'>
+              <Image
+                className='filter-grayscale'
+                src={'/images/jonatha.png'}
+                alt='profile'
+                width={550}
+                height={550}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default About;
