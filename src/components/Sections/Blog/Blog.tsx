@@ -3,7 +3,7 @@ import { BlogProp } from './types';
 export default function Blog({ children }: Readonly<BlogProp>) {
   return (
     <section className='h-100 mt-8 pt-8'>
-      <div className='mx-auto max-w-7xl justify-center px-4 py-12'>
+      <div className='mx-auto max-w-7xl justify-center px-4 md:py-12'>
         <div className='mx-auto lg:mx-0'>
           <h1 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-6xl'>
             <span className='leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline'>
