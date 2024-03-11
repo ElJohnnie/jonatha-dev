@@ -2,7 +2,7 @@
 
 exports[`should render correctly Footer component match snapshot 1`] = `
 <footer
-  class="text-secondary flex w-full w-full justify-center text-sm font-medium sm:pl-0 md:pl-6 lg:pl-12"
+  class="flex w-full justify-center text-sm font-medium sm:pl-0 md:pl-6 lg:pl-12"
 >
   <a
     aria-label="LinkedIn"

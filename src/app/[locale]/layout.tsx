@@ -26,7 +26,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className='grid h-screen grid-rows-[10%,auto,10%]'>
+      <body className='grid-rows-[10%, 80%, 10%] grid h-screen'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className='row-start-1'>
             <NavHeader></NavHeader>

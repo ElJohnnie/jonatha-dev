@@ -9,7 +9,7 @@ const About: React.FC<AboutProps> = ({
   image,
 }) => {
   return (
-    <section className='h-100 mt-4 pt-4'>
+    <section className='mt-4 h-auto pt-4'>
       <div className='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:py-16'>
         <div className='mr-auto md:col-span-7'>
           {image && (
