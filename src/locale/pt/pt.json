@@ -22,7 +22,8 @@
   "Header": {
     "home": "Home",
     "about": "Sobre",
-    "projects": "Projetos"
+    "projects": "Projetos",
+    "blog": "Blog"
   },
   "Social": {
     "github": "https://github.com/ElJohnnie",

@@ -26,11 +26,11 @@ export default function NavHeader() {
         href: '/about',
         current: pathname === '/about' || pathname === '/en/about',
       },
-      // {
-      //   label: t('projects'),
-      //   href: '/projects',
-      //   current: pathname === '/projects',
-      // },
+      {
+        label: t('blog'),
+        href: '/blog',
+        current: pathname === '/blog' || pathname === '/en/blog',
+      },
     ];
   }, [t, pathname]);
 
