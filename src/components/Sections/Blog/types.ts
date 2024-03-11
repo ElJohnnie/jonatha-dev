@@ -24,3 +24,7 @@ interface Post {
 export interface ArticleComponent {
   post: Post;
 }
+
+export interface BlogProp {
+  children: React.ReactNode;
+}

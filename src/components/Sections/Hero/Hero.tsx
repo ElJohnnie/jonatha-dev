@@ -3,14 +3,7 @@
 
 import Image from 'next/image';
 import AnimateButton from '../../Buttons/AnimateButton';
-
-interface HeroProps {
-  title: string;
-  description?: string;
-  solutions?: string[];
-  linkButton?: string;
-  image?: boolean;
-}
+import { HeroProps } from './types';
 
 const Hero: React.FC<HeroProps> = ({
   title,
