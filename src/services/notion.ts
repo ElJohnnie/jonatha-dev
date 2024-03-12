@@ -6,7 +6,17 @@ import { NotionToMarkdown } from 'notion-to-md';
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
 
-export async function getAllPosts() {
+export async function getAllPosts(): Promise<
+{
+  id: string;
+  title: string;
+  slug: string;
+  date: string;
+  author: string;
+  avatar: string;
+  tags: string;
+}[] | []
+> {
   try {
     const databaseId = process.env.NOTION_DATABASE_ID ?? '';
 
