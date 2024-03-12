@@ -1,11 +1,13 @@
 import ArticleElement from '@/components/Sections/Blog/ArticleElement';
-import { postsMock } from '@/mock';
 import { Blog } from '@/components/Sections';
+import { getAllPosts } from '@/services/notion';
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllPosts();
+
   return (
     <Blog>
-      {postsMock.map((post) => (
+      {posts.map((post) => (
         <ArticleElement key={post.id} post={post} />
       ))}
     </Blog>

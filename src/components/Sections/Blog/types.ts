@@ -1,24 +1,12 @@
-interface Author {
-  name: string;
-  role: string;
-  href: string;
-  imageUrl: string;
-}
-
-interface Category {
-  title: string;
-  href: string;
-}
-
 interface Post {
-  id: number;
+  id: string;
   title: string;
-  href: string;
-  description: string;
+  slug?: string;
+  description?: string;
   date: string;
-  datetime: string;
-  category: Category;
-  author: Author;
+  tags: string;
+  author: string;
+  avatar: string;
 }
 
 export interface ArticleComponent {

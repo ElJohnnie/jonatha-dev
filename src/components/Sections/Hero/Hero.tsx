@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({
     <section className='mt-8 h-auto pt-8'>
       <div className='max-w-screen mx-auto grid justify-center px-4 py-12'>
         <div className='mr-auto mt-[10vh] place-self-center md:col-span-12'>
-          <h1 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-6xl'>
+          <h1 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-6xl dark:text-white'>
             <span className='leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline'>
               {title}
             </span>

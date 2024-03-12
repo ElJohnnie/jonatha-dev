@@ -11,7 +11,7 @@ exports[`should render correctly Hero component match snapshot 1`] = `
       class="mr-auto mt-[10vh] place-self-center md:col-span-12"
     >
       <h1
-        class="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight dark:text-white md:text-6xl"
+        class="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-6xl dark:text-white"
       >
         <span
           class="leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline"
