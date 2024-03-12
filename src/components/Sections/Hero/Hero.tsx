@@ -1,6 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-'use client';
-
 import Image from 'next/image';
 import AnimateButton from '../../Buttons/AnimateButton';
 import { HeroProps } from './types';
