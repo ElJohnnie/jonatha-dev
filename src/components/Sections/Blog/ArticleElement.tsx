@@ -34,10 +34,8 @@ export default function ArticleElement({ post }: Readonly<ArticleComponent>) {
         />
         <div className='text-sm leading-6'>
           <p className='font-semibold text-slate-50'>
-            <Link href='/blog'>
-              <span className='absolute inset-0' />
-              {post.author}
-            </Link>
+            <span className='absolute inset-0' />
+            {post.author}
           </p>
           <p className='text-gray-600'>{post.author}</p>
         </div>

@@ -19,17 +19,24 @@ export default function NavHeader() {
       {
         label: t('home'),
         href: '/',
-        current: pathname === '/' || pathname === '' || pathname === '/en',
+        current:
+          pathname &&
+          (pathname.startsWith('/') ||
+            (pathname && pathname.startsWith('/en'))),
       },
       {
         label: t('about'),
         href: '/about',
-        current: pathname === '/about' || pathname === '/en/about',
+        current:
+          (pathname && pathname.startsWith('/about')) ||
+          (pathname && pathname.startsWith('/en/about')),
       },
       {
         label: t('blog'),
         href: '/blog',
-        current: pathname === '/blog' || pathname === '/en/blog',
+        current:
+          (pathname && pathname.startsWith('/blog')) ||
+          (pathname && pathname.startsWith('/en/blog')),
       },
     ];
   }, [t, pathname]);

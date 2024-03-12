@@ -25,14 +25,14 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body className='grid-rows-[10%, 80%, 10%] grid h-screen'>
+    <html lang={locale} className='h-full'>
+      <body className='flex h-screen flex-col'>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <div className='row-start-1'>
+          <div>
             <NavHeader></NavHeader>
           </div>
-          <main className='row-start-2 overflow-y-auto'>{children}</main>
-          <div className='row-start-3'>
+          <main className='grow overflow-y-auto'>{children}</main>
+          <div>
             <Footer />
           </div>
         </NextIntlClientProvider>
