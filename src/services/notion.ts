@@ -5,6 +5,7 @@ import { NotionDatabaseResponse } from './types';
 import { NotionToMarkdown } from 'notion-to-md';
 
 const notion = new Client({ auth: process.env.NOTION_API_KEY });
+const databaseId = process.env.NOTION_DATABASE_ID ?? '';
 
 export async function getAllPosts(): Promise<
   | {
@@ -19,8 +20,6 @@ export async function getAllPosts(): Promise<
   | []
 > {
   try {
-    const databaseId = process.env.NOTION_DATABASE_ID ?? '';
-
     const response = await notion.databases.query({
       database_id: databaseId,
       filter: {
@@ -59,7 +58,6 @@ export async function getAllPosts(): Promise<
 }
 
 export async function getPost(slug: string): Promise<any> {
-  const databaseId = process.env.NOTION_DATABASE_ID ?? '';
   const response = await notion.databases.query({
     database_id: databaseId,
     filter: {
@@ -82,7 +80,6 @@ export async function getPost(slug: string): Promise<any> {
 }
 
 export async function getPostsByTag(slug: string): Promise<any> {
-  const databaseId = process.env.NOTION_DATABASE_ID ?? '';
   const response = await notion.databases.query({
     database_id: databaseId,
     filter: {

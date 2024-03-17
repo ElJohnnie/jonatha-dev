@@ -19,10 +19,7 @@ export default function NavHeader() {
       {
         label: t('home'),
         href: '/',
-        current:
-          pathname &&
-          (pathname.startsWith('/') ||
-            (pathname && pathname.startsWith('/en'))),
+        current: pathname === '/' || pathname === '/en',
       },
       {
         label: t('about'),
