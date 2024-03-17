@@ -19,28 +19,32 @@ export default function NavHeader() {
       {
         label: t('home'),
         href: '/',
-        current: pathname === '/' || pathname === '' || pathname === '/en',
+        current: pathname === '/' || pathname === '/en',
       },
       {
         label: t('about'),
         href: '/about',
-        current: pathname === '/about' || pathname === '/en/about',
+        current:
+          (pathname && pathname.startsWith('/about')) ||
+          (pathname && pathname.startsWith('/en/about')),
       },
-      // {
-      //   label: t('projects'),
-      //   href: '/projects',
-      //   current: pathname === '/projects',
-      // },
+      {
+        label: t('blog'),
+        href: '/blog',
+        current:
+          (pathname && pathname.startsWith('/blog')) ||
+          (pathname && pathname.startsWith('/en/blog')),
+      },
     ];
   }, [t, pathname]);
 
   return (
-    <header className='absolute top-0 z-10 order-1 mt-3 flex min-h-[60px] w-full'>
-      <nav className='mt-4 flex-1 px-5 min-[480px]:order-2 min-[480px]:mt-0 '>
-        <ul className='flex flex-row items-center justify-normal gap-4'>
+    <header className='order-1 flex flex min-h-[60px] w-full'>
+      <nav className='mb-2 mt-2 flex-1 justify-center px-5'>
+        <ul className='flex flex-row items-center gap-4'>
           <Link
             href='/'
-            className='text-primary pl-5 text-lg font-bold sm:mr-5 lg:mr-12'
+            className='text-primary text-lg font-bold sm:mr-5 md:ml-5 lg:mr-12'
           >
             <Image src={Logo} alt='Your Company' width={45} height={45} />
           </Link>
