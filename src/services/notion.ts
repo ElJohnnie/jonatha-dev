@@ -25,9 +25,9 @@ export async function getAllPosts(): Promise<
       filter: {
         or: [
           {
-            property: 'slug',
-            rich_text: {
-              equals: 'any',
+            property: 'avaible',
+            checkbox: {
+              equals: true,
             },
           },
         ],
