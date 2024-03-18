@@ -18,7 +18,11 @@ export default function ArticleElement({ post }: Readonly<ArticleComponent>) {
       </div>
       <div className='group relative'>
         <h3 className='mt-3 text-lg font-semibold leading-6 text-slate-50 group-hover:text-indigo-500'>
-          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+          <Link
+            href={`/blog/${post.slug}?tag=${post.tags}&author=${post.author}`}
+          >
+            {post.title}
+          </Link>
         </h3>
         <p className='mt-5 line-clamp-3 text-sm leading-6 text-gray-500'>
           {post.description}

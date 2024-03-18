@@ -191,14 +191,18 @@ module.exports = {
     },
   },
   plugins: [
-    function ({ addUtilities }) {
+    function ({ addUtilities, addBase, config }) {
       const newUtilities = {
         '.filter-grayscale': {
           filter: 'grayscale(100%)',
         },
       };
-
       addUtilities(newUtilities, ['responsive', 'hover']);
+      addBase({
+        h1: { fontSize: config('theme.fontSize.2xl') },
+        h2: { fontSize: config('theme.fontSize.xl') },
+        h3: { fontSize: config('theme.fontSize.lg') },
+      });
     },
   ],
 };
