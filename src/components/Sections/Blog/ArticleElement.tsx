@@ -24,7 +24,7 @@ export default function ArticleElement({ post }: Readonly<ArticleComponent>) {
           {post.description}
         </p>
       </div>
-      <div className='relative mt-8 flex items-center gap-x-4'>
+      <div className='relative mt-2 flex items-center gap-x-4'>
         <Image
           src={post.avatar}
           alt=''
