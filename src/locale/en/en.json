@@ -17,7 +17,7 @@
     "experience-3": "I worked as a software developer, specializing in front-end in B2B channels. Orchestrated technical refinements under client demands, creating quality development architectures at Meu Vivo Empresas. I developed demands using different technologies, such as: Vue.js, Node.js, Java Quarkus, Python. I created covering quality, unit tests with Jest in the demands of the Node ecosystem, in addition to eliminating mutants with Stryker. Unit testing in Java with JUnit. I performed numerous site reliability engineering (SRE) activities at Meu Vivo Empresas, monitoring and solving common problems in large software. Working in microservices using Kubernetes, Docker and RabbitMQ for messaging. Architected improvements in communication between microservices, proposing solutions that added maturity to the business. Proposed and developed architectures that covered the use of MongoDB for document manipulation and caching with Redis. Technologies such as: Grafana, Kibana, Prometheus and Dynatrace to monitor, improve and promote the maturity of software and its respective microservices"
   },
   "Blog": {
-    "empty": "Teste 123"
+    "empty": "There are no articles available yet"
   },
   "Projects": {
     "title": "Under development!"

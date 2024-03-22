@@ -17,7 +17,7 @@
     "experience-3": "Atuei como desenvolvedor de software, especializado em front-end nos canais B2B. Orquestrei refinamentos técnicos sob as demandas do cliente, criando arquiteturas de desenvolvimento de qualidade no Meu Vivo Empresas. Desenvolvi demandas utilizando diferentes tecnologias, como: Vue.js, Node.js, Java Quarkus, Python. Criei abrangendo qualidade, testes unitários com Jest nas demandas do ecossistema Node, além de eliminar mutantes com Stryker. Testes unitários em Java com JUnit. Fiz inúmeras atuações de site reliability engineering (SRE) no Meu Vivo Empresas, realizando monitoramento e solução de problemas comuns em software de grande porte. Atuação em microsserviços utilizando Kubernetes, Docker e RabbitMQ para mensageria. Arquitetei melhorias na comunicação entre os microsserviços, propondo soluções que agregou maturidade ao negócio. Propuz e desenvolvi arquiteturas que abrangeu utilizações de MongoDB para manipulação de documentos e cacheamentos com Redis. Tecnologias como: Grafana, Kibana, Prometheus e Dynatrace para monitorar, aprimorar e promover a maturidade de software e seus respectivos microsserviços"
   },
   "Blog": {
-    "empty": "Teste 123"
+    "empty": "Não há artigos disponíveis ainda"
   },
   "Projects": {
     "title": "Em desenvolvimento!"
