@@ -24,11 +24,13 @@ export default function BlogPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-     getAllPosts().then((res) => {
-      setPosts(res);
-     }).finally(() => {
-      setLoading(false);
-     });
+      getAllPosts()
+        .then((res) => {
+          setPosts(res);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     };
 
     fetchData();
@@ -36,7 +38,7 @@ export default function BlogPage() {
 
   const postLength = !!posts.length;
 
-  if (loading) return <LoadingComponent />
+  if (loading) return <LoadingComponent />;
 
   return postLength ? (
     <Blog>
