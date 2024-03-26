@@ -1,8 +1,10 @@
-import { ArticleComponent } from './types';
+import { ArticleElementComponent } from './types';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function ArticleElement({ post }: Readonly<ArticleComponent>) {
+export default function ArticleElement({
+  post,
+}: Readonly<ArticleElementComponent>) {
   return (
     <article
       key={post.id}
