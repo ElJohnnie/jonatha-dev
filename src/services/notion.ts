@@ -72,7 +72,7 @@ export async function getPost(slug: string): Promise<any> {
         ],
       },
     });
-    console.log(response);
+    
     const pageId = response.results[0].id;
     const n2m = new NotionToMarkdown({ notionClient: notion });
 
