@@ -1,42 +1,40 @@
-'use client';
-import { useMemo } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Logo from '../../../public/JF.png';
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
-function classNames(...classes: any) {
+interface NavHeaderProps {
+  locale: string;
+  pathname?: string;
+}
+
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function NavHeader() {
+export default function NavHeader({
+  locale,
+  pathname,
+}: Readonly<NavHeaderProps>) {
   const t = useTranslations('Header');
-  const pathname = usePathname();
 
-  const links = useMemo(() => {
-    return [
-      {
-        label: t('home'),
-        href: '/',
-        current: pathname === '/' || pathname === '/en',
-      },
-      {
-        label: t('about'),
-        href: '/about',
-        current:
-          (pathname && pathname.startsWith('/about')) ||
-          (pathname && pathname.startsWith('/en/about')),
-      },
-      {
-        label: t('blog'),
-        href: '/blog',
-        current:
-          (pathname && pathname.startsWith('/blog')) ||
-          (pathname && pathname.startsWith('/en/blog')),
-      },
-    ];
-  }, [t, pathname]);
+  const links = [
+    {
+      label: t('home'),
+      href: `/${locale}`,
+      current: pathname === '/pt' || pathname === '/en',
+    },
+    {
+      label: t('about'),
+      href: `/${locale}/about`,
+      current: pathname && pathname.startsWith(`/${locale}/about`),
+    },
+    {
+      label: t('blog'),
+      href: `/${locale}/blog`,
+      current: pathname && pathname.startsWith(`/${locale}/blog`),
+    },
+  ];
 
   return (
     <header className='order-1 flex flex min-h-[60px] w-full'>

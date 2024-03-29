@@ -14,7 +14,7 @@ describe('should render correctly NavHeader component', () => {
   it('match snapshot', () => {
     const { container } = render(
       <NextIntlClientProvider locale='en' messages={messages}>
-        <NavHeader />
+        <NavHeader locale='pt' />
       </NextIntlClientProvider>
     );
     expect(container.firstChild).toMatchSnapshot();
