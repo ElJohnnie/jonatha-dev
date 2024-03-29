@@ -1,10 +1,14 @@
-import createMiddleware from 'next-intl/middleware';
+import { config as configI18n } from '@/locale/config';
+import createIntlMiddleware from 'next-intl/middleware';
+import { NextRequest } from 'next/server';
 
-export default createMiddleware({
-  locales: ['en', 'pt'],
-  defaultLocale: 'pt',
-});
+const handleI18nRouting = createIntlMiddleware(configI18n);
+
+export function middleware(request: NextRequest) {
+  const response = handleI18nRouting(request);
+  return response;
+}
 
 export const config = {
-  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
+  matcher: ['/((?!cdn|auth|api|_next|sitemap.xml|robots.txt|.*\\..*).*)'],
 };
