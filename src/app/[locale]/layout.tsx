@@ -1,5 +1,5 @@
 import { NavHeader } from '@/components/Navigation';
-import { NextIntlClientProvider, NextIntlProvider } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Footer } from '@/components/Footer';
