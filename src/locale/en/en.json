@@ -31,5 +31,13 @@
   "Social": {
     "github": "https://github.com/ElJohnnie",
     "linkedin": "https://www.linkedin.com/in/jonatha-follmer/"
+  },
+  "GenericError": {
+    "error": "Error",
+    "hasError": "An unexpected error has occurred."
+  },
+  "NotFoundError": {
+    "error": "Erro",
+    "hasError": "Page not found"
   }
 }
