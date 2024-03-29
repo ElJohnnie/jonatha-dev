@@ -31,5 +31,13 @@
   "Social": {
     "github": "https://github.com/ElJohnnie",
     "linkedin": "https://www.linkedin.com/in/jonatha-follmer/"
+  },
+  "GenericError": {
+    "error": "Erro",
+    "hasError": "Ocorreu um erro inesperado"
+  },
+  "NotFoundError": {
+    "error": "Erro",
+    "hasError": "Página não encontrada"
   }
 }

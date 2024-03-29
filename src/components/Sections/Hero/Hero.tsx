@@ -2,13 +2,13 @@ import Image from 'next/image';
 import AnimateButton from '../../Buttons/AnimateButton';
 import { HeroProps } from './types';
 
-const Hero: React.FC<HeroProps> = ({
+export default function Hero({
   title,
   description,
   solutions,
   linkButton,
   image,
-}) => {
+}: Readonly<HeroProps>) {
   return (
     <section className='mt-8 h-auto pt-8'>
       <div className='max-w-screen mx-auto grid justify-center px-4 py-12'>
@@ -18,7 +18,6 @@ const Hero: React.FC<HeroProps> = ({
               {title}
             </span>
           </h1>
-          {/* <!-- Sliding Text animation --> */}
           {description && (
             <div className='md:inline-flex'>
               <h1 className='text-1xl bg-gradient-to-r from-slate-100 to-slate-200 to-50% bg-clip-text font-extrabold tracking-tight text-transparent [text-wrap:balance] md:text-4xl'>
@@ -57,6 +56,4 @@ const Hero: React.FC<HeroProps> = ({
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

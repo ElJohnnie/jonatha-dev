@@ -1,13 +1,13 @@
 import { AboutProps } from './types';
 import Image from 'next/image';
 
-const About: React.FC<AboutProps> = ({
+export default function About({
   title,
   description,
   postDescription,
   features,
   image,
-}) => {
+}: AboutProps) {
   return (
     <section className='mt-4 h-auto pt-4'>
       <div className='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:py-16'>
@@ -52,6 +52,4 @@ const About: React.FC<AboutProps> = ({
       </div>
     </section>
   );
-};
-
-export default About;
+}

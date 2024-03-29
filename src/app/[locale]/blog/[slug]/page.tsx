@@ -12,7 +12,6 @@ export default async function BlogPage({
   const contentPost = getPost(params.slug);
   const postsByTag = getPostsByTag(searchParams.tag, params.slug);
   const [content, tagPosts] = await Promise.all([contentPost, postsByTag]);
-  console.log(tagPosts);
 
-  return <Article {...content} />;
+  return <Article content={content} tagPosts={tagPosts} />;
 }
