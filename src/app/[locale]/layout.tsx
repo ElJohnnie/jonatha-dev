@@ -3,6 +3,12 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
 import { Footer } from '@/components/Footer';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Jonatha Dev',
+  description: 'Jonatha Dev',
+}
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'pt' }];
