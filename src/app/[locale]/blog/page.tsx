@@ -39,14 +39,14 @@ export default function BlogPage() {
   const postLength = !!posts.length;
 
   if (loading) return <LoadingComponent />;
+  
+  if(!postLength) return <EmptyBlog text={t('empty')} />
 
-  return postLength ? (
+  return (
     <Blog>
       {posts.map((post) => (
         <ArticleElement key={post.id} post={post} />
       ))}
     </Blog>
-  ) : (
-    <EmptyBlog text={t('empty')} />
-  );
+  ) 
 }
