@@ -1,13 +1,22 @@
-'use client';
 import { About } from '@/components/Sections';
 import { useTranslations } from 'next-intl';
 import {
   CodeBracketSquareIcon,
   AcademicCapIcon,
 } from '@heroicons/react/20/solid';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function AboutPage() {
+interface AboutProps {
+  params: {
+    lang: string;
+  };
+}
+
+export default function AboutPage({ params }: Readonly<AboutProps>) {
+  unstable_setRequestLocale(params.lang);
+
   const t = useTranslations('About');
+
   const features = [
     {
       name: 'Universidade de Santa Cruz do sul:',
