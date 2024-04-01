@@ -61,7 +61,7 @@ export default function NavHeader() {
               {item.label}
             </Link>
           ))}
-          <LangNavigation />
+          {/* <LangNavigation /> */}
         </div>
       </nav>
     </header>
