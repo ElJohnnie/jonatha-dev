@@ -33,7 +33,7 @@ export default async function LocaleLayout({
   params,
 }: Readonly<LocaleLayout>) {
   unstable_setRequestLocale(params.lang);
-  
+
   let messages: any;
   const locale = useLocale();
 
@@ -42,7 +42,6 @@ export default async function LocaleLayout({
   } catch (error) {
     notFound();
   }
-
 
   return (
     <html lang={locale} className='h-full'>
@@ -60,4 +59,3 @@ export default async function LocaleLayout({
     </html>
   );
 }
-

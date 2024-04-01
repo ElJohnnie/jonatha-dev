@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useState, useEffect } from 'react';
 import ArticleElement from '@/components/Sections/Blog/ArticleElement';
 import { Blog, EmptyBlog } from '@/components/Sections';
@@ -45,14 +45,14 @@ export default function BlogPage({ params }: Readonly<BlogPageProps>) {
   const postLength = !!posts.length;
 
   if (loading) return <LoadingComponent />;
-  
-  if(!postLength) return <EmptyBlog text={t('empty')} />
 
-  return (
+  return postLength ? (
     <Blog>
       {posts.map((post) => (
         <ArticleElement key={post.id} post={post} />
       ))}
     </Blog>
-  ) 
+  ) : (
+    <EmptyBlog text={t('empty')} />
+  );
 }

@@ -1,6 +1,13 @@
-'use client';
 import AlertComponent from '@/components/Alerts/AlertComponent';
+import { unstable_setRequestLocale } from 'next-intl/server';
 
-export default function NotFound() {
+interface Props {
+  params: {
+    lang: string;
+  };
+}
+
+export default function NotFound({params}: Props) {
+  unstable_setRequestLocale(params.lang);
   return <AlertComponent error='NotFoundError' />;
 }

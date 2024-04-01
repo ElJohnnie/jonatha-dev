@@ -1,5 +1,4 @@
-"use client";
-
+'use client';
 import { useMemo } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
