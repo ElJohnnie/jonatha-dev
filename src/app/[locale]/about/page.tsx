@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { About } from '@/components/Sections';
 import { useTranslations } from 'next-intl';
 import {

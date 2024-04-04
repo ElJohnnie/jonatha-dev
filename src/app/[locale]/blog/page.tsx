@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React, { useState, useEffect } from 'react';
 import ArticleElement from '@/components/Sections/Blog/ArticleElement';
 import { Blog, EmptyBlog } from '@/components/Sections';

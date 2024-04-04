@@ -1,7 +1,6 @@
-'use client'
+'use client';
 import { useTranslations } from 'next-intl';
 import { Hero } from '@/components/Sections';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface HomeProps {
   params: {

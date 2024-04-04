@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import AlertComponent from '@/components/Alerts/AlertComponent';
 
 export default function NotFound() {

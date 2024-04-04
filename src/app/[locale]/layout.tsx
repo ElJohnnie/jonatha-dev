@@ -30,7 +30,6 @@ export function generateStaticParams() {
 export default async function LocaleLayout({
   children,
 }: Readonly<LocaleLayout>) {
-
   let messages: any;
   const locale = useLocale();
 
