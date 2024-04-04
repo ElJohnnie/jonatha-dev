@@ -1,10 +1,10 @@
+'use client'
 import { About } from '@/components/Sections';
 import { useTranslations } from 'next-intl';
 import {
   CodeBracketSquareIcon,
   AcademicCapIcon,
 } from '@heroicons/react/20/solid';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface AboutProps {
   params: {
@@ -13,8 +13,6 @@ interface AboutProps {
 }
 
 export default function AboutPage({ params }: Readonly<AboutProps>) {
-  unstable_setRequestLocale(params.lang);
-
   const t = useTranslations('About');
 
   const features = [

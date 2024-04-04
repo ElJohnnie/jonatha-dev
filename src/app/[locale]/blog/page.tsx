@@ -4,7 +4,7 @@ import ArticleElement from '@/components/Sections/Blog/ArticleElement';
 import { Blog, EmptyBlog } from '@/components/Sections';
 import { getAllPosts } from '@/services/notion';
 import { useTranslations } from 'next-intl';
-import LoadingComponent from '@/components/Loading/Loading';
+import LoadingComponent from '@/components/Loading/LoadingComponent';
 
 interface Post {
   id: string;

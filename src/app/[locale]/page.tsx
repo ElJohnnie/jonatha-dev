@@ -1,3 +1,4 @@
+'use client'
 import { useTranslations } from 'next-intl';
 import { Hero } from '@/components/Sections';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -9,8 +10,6 @@ interface HomeProps {
 }
 
 export default function Home({ params }: Readonly<HomeProps>) {
-  unstable_setRequestLocale(params.lang);
-
   const t = useTranslations('Home');
 
   const solutions = [

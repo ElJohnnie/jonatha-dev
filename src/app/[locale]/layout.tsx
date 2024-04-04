@@ -1,6 +1,5 @@
 import { NavHeader } from '@/components/Navigation';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { Footer } from '@/components/Footer';
 import type { Metadata } from 'next';
@@ -30,9 +29,7 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params,
 }: Readonly<LocaleLayout>) {
-  unstable_setRequestLocale(params.lang);
 
   let messages: any;
   const locale = useLocale();
