@@ -1,14 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render correctly NavHeader component match snapshot 1`] = `
-<header
-  class="order-1 flex flex min-h-[60px] w-full"
->
+<header>
   <nav
-    class="mb-2 mt-2 flex-1 justify-center px-5"
+    aria-label="Global"
+    class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
   >
     <div
-      class="flex flex-row items-center gap-4"
+      class="flex lg:flex-1"
     >
       <a
         class="text-primary text-lg font-bold sm:mr-5 md:ml-5 lg:mr-12"
@@ -26,6 +25,40 @@ exports[`should render correctly NavHeader component match snapshot 1`] = `
           width="45"
         />
       </a>
+    </div>
+    <div
+      class="flex lg:hidden"
+    >
+      <button
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white-700"
+        type="button"
+      >
+        <span
+          class="sr-only"
+        >
+          Open main menu
+        </span>
+        <svg
+          aria-hidden="true"
+          class="h-6 w-6"
+          data-slot="icon"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      class="hidden lg:flex lg:gap-x-6 items-center"
+    >
       <a
         class="text-gray-300 hover:bg-indigo-950 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
         href="/en"
@@ -90,5 +123,8 @@ exports[`should render correctly NavHeader component match snapshot 1`] = `
       </div>
     </div>
   </nav>
+  <div
+    style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"
+  />
 </header>
 `;
