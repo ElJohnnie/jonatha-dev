@@ -29,7 +29,7 @@ export default function LangNavigation() {
     <Listbox value={selected} onChange={handleSelect}>
       {({ open }) => (
         <div className='relative mt-2'>
-          <Listbox.Button className='text-white-900 relative w-full cursor-default rounded-md py-1.5 pl-3 pr-10 text-left shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6'>
+          <Listbox.Button className='text-white-900 relative block w-full cursor-default rounded-lg rounded-md px-3 py-1.5 py-2 text-left shadow-sm ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6 md:pl-3 md:pr-10 md:ring-1'>
             <span className='flex items-center'>
               <span className='ml-3 block truncate'>{selected}</span>
             </span>
@@ -48,14 +48,14 @@ export default function LangNavigation() {
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Listbox.Options className='absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
+            <Listbox.Options className='absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
               {langs.map((item, index) => (
                 <Listbox.Option
                   key={index}
                   className={({ active }) =>
                     classNames(
-                      active ? 'bg-indigo-600 text-white' : 'text-gray-900',
-                      'relative cursor-default select-none py-2 pl-3 pr-9'
+                      active ? 'bg-indigo-600' : '',
+                      'relative cursor-default select-none py-2 pl-3 pr-9 text-white'
                     )
                   }
                   value={item}
