@@ -37,7 +37,7 @@ export default async function LocaleLayout({
       <body className='flex h-screen flex-col'>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div>
-            <NavHeader></NavHeader>
+            <NavHeader />
           </div>
           <main className='grow overflow-y-auto'>{children}</main>
           <div>
