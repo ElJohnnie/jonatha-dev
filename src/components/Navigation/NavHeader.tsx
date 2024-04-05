@@ -20,18 +20,18 @@ export default function NavHeader() {
     return [
       {
         label: t('home'),
-        href: '/',
+        href: `/${currentLocale}/`,
         current: pathname === `/${currentLocale}`,
       },
       {
         label: t('about'),
-        href: '/about',
-        current: pathname && pathname.startsWith(`/${currentLocale}/about`),
+        href: `/${currentLocale}/about`,
+        current: pathname && pathname.includes(`/about`),
       },
       {
         label: t('blog'),
-        href: '/blog',
-        current: pathname && pathname.startsWith(`/${currentLocale}/blog`),
+        href: `/${currentLocale}/blog`,
+        current: pathname && pathname.includes(`/blog`),
       },
     ];
   }, [t, pathname, currentLocale]);
