@@ -6,8 +6,15 @@ import {
   AcademicCapIcon,
 } from '@heroicons/react/20/solid';
 
-export default function AboutPage() {
+interface AboutProps {
+  params: {
+    lang: string;
+  };
+}
+
+export default function AboutPage({ params }: Readonly<AboutProps>) {
   const t = useTranslations('About');
+
   const features = [
     {
       name: 'Universidade de Santa Cruz do sul:',

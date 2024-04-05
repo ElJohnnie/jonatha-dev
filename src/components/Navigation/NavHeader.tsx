@@ -1,10 +1,11 @@
 'use client';
 import { useMemo } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import Logo from '../../../public/JF.png';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import LangNavigation from './LangNavigation';
 
 function classNames(...classes: any) {
   return classes.filter(Boolean).join(' ');
@@ -13,35 +14,32 @@ function classNames(...classes: any) {
 export default function NavHeader() {
   const t = useTranslations('Header');
   const pathname = usePathname();
+  const currentLocale = useLocale();
 
   const links = useMemo(() => {
     return [
       {
         label: t('home'),
         href: '/',
-        current: pathname === '/' || pathname === '/en',
+        current: pathname === `/${currentLocale}`,
       },
       {
         label: t('about'),
         href: '/about',
-        current:
-          (pathname && pathname.startsWith('/about')) ||
-          (pathname && pathname.startsWith('/en/about')),
+        current: pathname && pathname.startsWith(`/${currentLocale}/about`),
       },
       {
         label: t('blog'),
         href: '/blog',
-        current:
-          (pathname && pathname.startsWith('/blog')) ||
-          (pathname && pathname.startsWith('/en/blog')),
+        current: pathname && pathname.startsWith(`/${currentLocale}/blog`),
       },
     ];
-  }, [t, pathname]);
+  }, [t, pathname, currentLocale]);
 
   return (
     <header className='order-1 flex flex min-h-[60px] w-full'>
       <nav className='mb-2 mt-2 flex-1 justify-center px-5'>
-        <ul className='flex flex-row items-center gap-4'>
+        <div className='flex flex-row items-center gap-4'>
           <Link
             href='/'
             className='text-primary text-lg font-bold sm:mr-5 md:ml-5 lg:mr-12'
@@ -63,7 +61,10 @@ export default function NavHeader() {
               {item.label}
             </Link>
           ))}
-        </ul>
+          <div className='ml-auto'>
+            <LangNavigation />
+          </div>
+        </div>
       </nav>
     </header>
   );

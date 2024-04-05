@@ -4,7 +4,7 @@ import ArticleElement from '@/components/Sections/Blog/ArticleElement';
 import { Blog, EmptyBlog } from '@/components/Sections';
 import { getAllPosts } from '@/services/notion';
 import { useTranslations } from 'next-intl';
-import LoadingComponent from '@/components/Loading/Loading';
+import LoadingComponent from '@/components/Loading/LoadingComponent';
 
 interface Post {
   id: string;
@@ -16,7 +16,13 @@ interface Post {
   tags: string;
 }
 
-export default function BlogPage() {
+interface BlogPageProps {
+  params: {
+    lang: string;
+  };
+}
+
+export default function BlogPage({ params }: Readonly<BlogPageProps>) {
   const t = useTranslations('Blog');
 
   const [posts, setPosts] = useState<Post[]>([]);

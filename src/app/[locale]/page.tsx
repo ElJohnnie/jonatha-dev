@@ -2,7 +2,13 @@
 import { useTranslations } from 'next-intl';
 import { Hero } from '@/components/Sections';
 
-export default function Home() {
+interface HomeProps {
+  params: {
+    lang: string;
+  };
+}
+
+export default function Home({ params }: Readonly<HomeProps>) {
   const t = useTranslations('Home');
 
   const solutions = [

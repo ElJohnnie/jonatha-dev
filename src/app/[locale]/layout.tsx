@@ -1,29 +1,31 @@
 import { NavHeader } from '@/components/Navigation';
-import { NextIntlClientProvider } from 'next-intl';
+import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { ReactNode } from 'react';
 import { Footer } from '@/components/Footer';
-import type { Metadata } from 'next'
- 
-export const metadata: Metadata = {
-  title: 'Jonatha Dev',
-  description: 'Jonatha Dev',
-}
-
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'pt' }];
-}
+import type { Metadata } from 'next';
 
 interface LocaleLayout {
-  children?: ReactNode;
-  params?: any;
+  children: React.ReactNode;
+  params: {
+    lang: string;
+  };
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = 'Jonatha Dev';
+
+  return {
+    metadataBase: new URL('https://jonathadev.vercel.app/'),
+    title,
+  };
 }
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
 }: Readonly<LocaleLayout>) {
   let messages: any;
+  const locale = useLocale();
+
   try {
     messages = (await import(`../../locale/${locale}/${locale}.json`)).default;
   } catch (error) {

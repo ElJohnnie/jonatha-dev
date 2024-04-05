@@ -3,6 +3,15 @@ import { NavHeader } from '../../../src/components/Navigation';
 import { render } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 
+const mockedRouter = {
+  push: jest.fn(),
+};
+
+jest.mock('../../../src/locale/navigation', () => ({
+  useRouter: () => mockedRouter,
+  usePathname: jest.fn(),
+}));
+
 jest.mock('next-intl', () => ({
   ...jest.requireActual('next-intl'),
   useTranslation: jest.fn().mockReturnValue({ t: (key: any) => key }),
