@@ -8,7 +8,7 @@ import { languages } from '../../locale/languages';
 
 const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
-}
+};
 
 export default function LangNavigation() {
   const actualLocale = useLocale();
