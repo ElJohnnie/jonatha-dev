@@ -61,7 +61,9 @@ export default function NavHeader() {
               {item.label}
             </Link>
           ))}
-          {/* <LangNavigation /> */}
+          <div className='ml-auto'>
+            <LangNavigation />
+          </div>
         </div>
       </nav>
     </header>

@@ -6,12 +6,13 @@ import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '../../locale/navigation';
 import { languages } from '../../locale/languages';
 
-function classNames(...classes: string[]) {
+const classNames = (...classes: string[]) => {
   return classes.filter(Boolean).join(' ');
 }
 
 export default function LangNavigation() {
-  const [selected, setSelected] = useState<string>();
+  const actualLocale = useLocale();
+  const [selected, setSelected] = useState<string>(actualLocale);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -30,7 +31,7 @@ export default function LangNavigation() {
         <div className='relative mt-2'>
           <Listbox.Button className='text-white-900 relative w-full cursor-default rounded-md py-1.5 pl-3 pr-10 text-left shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6'>
             <span className='flex items-center'>
-              <span className='ml-3 block truncate'>{}</span>
+              <span className='ml-3 block truncate'>{selected}</span>
             </span>
             <span className='pointer-events-none absolute inset-y-0 right-0 ml-3 flex items-center pr-2'>
               <ChevronUpDownIcon

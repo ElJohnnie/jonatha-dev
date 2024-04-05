@@ -3,7 +3,6 @@ import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { Footer } from '@/components/Footer';
 import type { Metadata } from 'next';
-import { LOCALES } from '@/common/consts';
 
 interface LocaleLayout {
   children: React.ReactNode;
@@ -12,19 +11,13 @@ interface LocaleLayout {
   };
 }
 
-export async function generateMetadata({
-  params,
-}: LocaleLayout): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const title = 'Jonatha Dev';
 
   return {
     metadataBase: new URL('https://jonathadev.vercel.app/'),
     title,
   };
-}
-
-export function generateStaticParams() {
-  return LOCALES.map((lang) => ({ lang }));
 }
 
 export default async function LocaleLayout({
