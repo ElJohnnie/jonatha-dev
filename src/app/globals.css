@@ -17,17 +17,9 @@
 }
 
 body {
-  background: linear-gradient(
-    45deg,
-    #020617,
-    #020617,
-    #020617,
-    #0c1430,
-    #0c1430,
-    #0c1430
-  );
+  background: #020617;
   background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  /* animation: gradient 30s ease infinite; */
   height: 100vh;
   color: rgb(var(--foreground-rgb));
 }
