@@ -2,69 +2,64 @@
 
 exports[`should render correctly Hero component match snapshot 1`] = `
 <section
-  class="mt-8 h-auto pt-8"
+  class="flex h-auto flex-col items-center pt-8 md:mt-8"
 >
   <div
-    class="max-w-screen mx-auto grid justify-center px-4 py-12"
+    class="text-center"
   >
+    <h1
+      class="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-6xl dark:text-white"
+    >
+      <span
+        class="leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline"
+      >
+        any title
+      </span>
+    </h1>
     <div
-      class="mr-auto mt-[10vh] place-self-center md:col-span-12"
+      class=" mb-4"
     >
       <h1
-        class="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-6xl dark:text-white"
+        class="text-1xl bg-gradient-to-r from-slate-100 to-slate-200 to-50% bg-clip-text font-extrabold tracking-tight text-transparent [text-wrap:balance] md:text-4xl"
       >
-        <span
-          class="leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline"
-        >
-          any title
-        </span>
+        any description
       </h1>
-      <div
-        class="md:inline-flex"
+      <span
+        class="inline-flex h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-2xl font-extrabold text-indigo-500 md:ml-1 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:text-4xl"
       >
-        <h1
-          class="text-1xl bg-gradient-to-r from-slate-100 to-slate-200 to-50% bg-clip-text font-extrabold tracking-tight text-transparent [text-wrap:balance] md:text-4xl"
+        <ul
+          class="block animate-text-slide-4 leading-tight [&_li]:block"
         >
-          any description
-           
-        </h1>
-        <span
-          class="text-1xl inline-flex h-[calc(theme(fontSize.base)*theme(lineHeight.tight))] flex-col overflow-hidden font-extrabold text-indigo-500 md:ml-1 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:text-4xl"
-        >
-          <ul
-            class="block animate-text-slide-4 text-left leading-tight [&_li]:block"
-          >
-            <li
-              aria-hidden="true"
-            />
-          </ul>
-        </span>
-      </div>
-      <div
-        class="mt-4 flex flex-row justify-center"
-      >
-        <a
-          class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-100 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
-          href="/about"
-        >
-          <span
-            class="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+          <li
+            aria-hidden="true"
           />
-          <span
-            class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
-          />
-          <span
-            class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
-          />
-          <span
-            class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
-          />
-          <span
-            class="flex items-center justify-center align-middle"
-          />
-        </a>
-      </div>
+        </ul>
+      </span>
     </div>
+  </div>
+  <div
+    class="mt-4"
+  >
+    <a
+      class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded rounded-md border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-100 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
+      href="/about"
+    >
+      <span
+        class="ease absolute left-0 top-0 h-0 w-0 rounded-md border-t-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+      />
+      <span
+        class="ease absolute right-0 top-0 h-0 w-0 rounded-md border-r-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
+      />
+      <span
+        class="ease absolute bottom-0 right-0 h-0 w-0 rounded-md border-b-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+      />
+      <span
+        class="ease absolute bottom-0 left-0 h-0 w-0 rounded-md border-l-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
+      />
+      <span
+        class="flex items-center justify-center align-middle"
+      />
+    </a>
   </div>
 </section>
 `;

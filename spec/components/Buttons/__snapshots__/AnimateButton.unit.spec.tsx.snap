@@ -2,20 +2,20 @@
 
 exports[`should render correctly AnimateButton component match snapshot 1`] = `
 <a
-  class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-100 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
+  class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded rounded-md border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-100 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
   href="/"
 >
   <span
-    class="ease absolute left-0 top-0 h-0 w-0 border-t-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+    class="ease absolute left-0 top-0 h-0 w-0 rounded-md border-t-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
   />
   <span
-    class="ease absolute right-0 top-0 h-0 w-0 border-r-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
+    class="ease absolute right-0 top-0 h-0 w-0 rounded-md border-r-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
   />
   <span
-    class="ease absolute bottom-0 right-0 h-0 w-0 border-b-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+    class="ease absolute bottom-0 right-0 h-0 w-0 rounded-md border-b-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
   />
   <span
-    class="ease absolute bottom-0 left-0 h-0 w-0 border-l-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
+    class="ease absolute bottom-0 left-0 h-0 w-0 rounded-md border-l-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
   />
   <span
     class="flex items-center justify-center align-middle"

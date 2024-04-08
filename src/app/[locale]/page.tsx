@@ -24,6 +24,7 @@ export default function Home({ params }: Readonly<HomeProps>) {
       description={t('description')}
       solutions={solutions}
       linkButton={t('linkButton')}
+      image={true}
     ></Hero>
   );
 }
