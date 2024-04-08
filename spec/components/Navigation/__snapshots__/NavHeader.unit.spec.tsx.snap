@@ -97,7 +97,7 @@ exports[`should render correctly NavHeader component match snapshot 1`] = `
               <span
                 class="ml-3 block truncate"
               >
-                en
+                En
               </span>
             </span>
             <span
