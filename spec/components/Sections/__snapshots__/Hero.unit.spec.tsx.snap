@@ -2,7 +2,7 @@
 
 exports[`should render correctly Hero component match snapshot 1`] = `
 <section
-  class="flex h-auto flex-col items-center pt-8 md:mt-8"
+  class="flex h-auto h-full flex-col items-center justify-center"
 >
   <div
     class="text-center"

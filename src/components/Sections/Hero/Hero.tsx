@@ -10,9 +10,9 @@ export default function Hero({
   image,
 }: Readonly<HeroProps>) {
   return (
-    <section className='flex h-auto flex-col items-center pt-8 md:mt-8'>
+    <section className='flex h-auto h-full flex-col items-center justify-center'>
       {image && (
-        <div className='md:mb-8'>
+        <div>
           <Image
             className='filter-grayscale'
             src={'/images/jonatha.png'}
