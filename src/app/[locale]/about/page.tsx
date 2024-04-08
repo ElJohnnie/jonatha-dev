@@ -22,12 +22,12 @@ export default function AboutPage({ params }: Readonly<AboutProps>) {
       icon: AcademicCapIcon,
     },
     {
-      name: 'Front-end Vivo (Telefônica) B2C:',
+      name: 'Software Engineer Mid-level, Vivo (Telefônica) B2C:',
       description: t('experience-2'),
       icon: CodeBracketSquareIcon,
     },
     {
-      name: 'Front-end Vivo (Telefônica) B2B:',
+      name: 'Software Engineer Junior, Vivo (Telefônica) B2B:',
       description: t('experience-3'),
       icon: CodeBracketSquareIcon,
     },
