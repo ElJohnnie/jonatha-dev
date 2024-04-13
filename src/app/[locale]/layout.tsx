@@ -20,6 +20,9 @@ export async function generateMetadata(): Promise<Metadata> {
     metadataBase: new URL('https://jonathadev.vercel.app/'),
     title,
     description,
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION,
+    },
     openGraph: {
       title,
       description,
