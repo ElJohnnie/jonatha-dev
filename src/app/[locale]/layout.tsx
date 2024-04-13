@@ -13,10 +13,33 @@ interface LocaleLayout {
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = 'Jonatha Dev';
+  const description = 'Full-Stack software engineer';
+  const siteName = 'Jonatha Dev';
 
   return {
     metadataBase: new URL('https://jonathadev.vercel.app/'),
     title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: 'https://jonathadev.vercel.app/',
+      siteName,
+      images: [
+        {
+          url: '/images/jonatha.png',
+          width: 800,
+          height: 600,
+        },
+        {
+          url: '/images/jonatha.png',
+          width: 1800,
+          height: 1600,
+          alt: 'Custom Alt',
+        },
+      ],
+      type: 'website',
+    },
   };
 }
 
