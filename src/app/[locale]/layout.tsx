@@ -15,13 +15,13 @@ export async function generateMetadata(): Promise<Metadata> {
   const title = 'Jonatha Dev';
   const description = 'Full-Stack software engineer';
   const siteName = 'Jonatha Dev';
-  
+
   return {
     metadataBase: new URL('https://jonathadev.vercel.app/'),
     title,
     description,
     verification: {
-      google: 'D7lAcx5Yo-DLGEeLtMiZIxWTAr14AZNjAPxFLh8yJEg'
+      google: process.env.GOOGLE_SITE_VERIFICATION,
     },
     openGraph: {
       title,
