@@ -1,11 +1,8 @@
 'use server';
 
-import { Client } from '@notionhq/client';
 import { NotionDatabaseResponse } from './types';
-import { NotionToMarkdown } from 'notion-to-md';
-
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
-const databaseId = process.env.NOTION_DATABASE_ID ?? '';
+import { notion, databaseId } from '@/config/notion.config';
+import NotionToMarkdownAdapter from '@/adapters/notion-to-markdown.adapter';
 
 export async function getAllPosts(): Promise<
   | {
@@ -74,10 +71,9 @@ export async function getPost(slug: string): Promise<any> {
     });
 
     const pageId = response.results[0].id;
-    const n2m = new NotionToMarkdown({ notionClient: notion });
+    const n2mAdapter = new NotionToMarkdownAdapter({ notionClient: notion });
 
-    const mdblocks = await n2m.pageToMarkdown(pageId);
-    const mdString = n2m.toMarkdownString(mdblocks);
+    const mdString = await n2mAdapter.pageToMarkdownAndString(pageId);
     return { content: mdString.parent };
   } catch (err) {
     console.warn(
