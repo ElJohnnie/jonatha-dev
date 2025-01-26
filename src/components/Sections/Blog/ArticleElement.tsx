@@ -14,12 +14,12 @@ export default function ArticleElement({
         <time dateTime={post.date} className='text-gray-500'>
           {post.date}
         </time>
-        <p className='relative z-10 rounded-full bg-indigo-500 px-3 py-1.5 font-medium text-slate-50 hover:bg-indigo-600'>
+        <p className='relative z-10 rounded-full bg-slate-500 px-3 py-1.5 font-medium text-slate-50 hover:bg-slate-600'>
           {post.tags}
         </p>
       </div>
       <div className='group relative'>
-        <h3 className='mt-3 text-lg font-semibold leading-6 text-slate-50 group-hover:text-indigo-500'>
+        <h3 className='mt-3 text-lg font-semibold leading-6 text-slate-50 group-hover:text-slate-500'>
           <Link
             href={`/blog/${post.slug}?tag=${post.tags}&author=${post.author}`}
           >
@@ -39,7 +39,7 @@ export default function ArticleElement({
           height={50}
         />
         <div className='text-sm leading-6'>
-          <p className='font-semibold text-slate-50'>
+          <p className='font-semibold text-slate-100'>
             <span className='absolute inset-0' />
             {post.author}
           </p>
