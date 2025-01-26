@@ -11,18 +11,18 @@ interface HomeProps {
 export default function Home({ params }: Readonly<HomeProps>) {
   const t = useTranslations('Home');
 
-  const solutions = [
-    t('architecture'),
-    t('back-end'),
-    t('front-end'),
-    t('ecosystem'),
-  ];
+  // const solutions = [
+  //   t('architecture'),
+  //   t('back-end'),
+  //   t('front-end'),
+  //   t('ecosystem'),
+  // ];
 
   return (
     <Hero
       title={t('title')}
       description={t('description')}
-      solutions={solutions}
+      // solutions={solutions}
       linkButton={t('linkButton')}
       image={true}
     ></Hero>

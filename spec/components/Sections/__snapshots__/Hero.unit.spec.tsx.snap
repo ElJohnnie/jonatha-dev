@@ -11,7 +11,7 @@ exports[`should render correctly Hero component match snapshot 1`] = `
       class="mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-6xl dark:text-white"
     >
       <span
-        class="leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text py-2 text-transparent lg:inline"
+        class="leading-12 block w-full bg-gradient-to-r from-slate-700 to-slate-500 bg-clip-text py-2 text-transparent lg:inline"
       >
         any title
       </span>
@@ -24,37 +24,26 @@ exports[`should render correctly Hero component match snapshot 1`] = `
       >
         any description
       </h1>
-      <span
-        class="inline-flex h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-2xl font-extrabold text-indigo-500 md:ml-1 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] md:text-4xl"
-      >
-        <ul
-          class="block animate-text-slide-4 leading-tight [&_li]:block"
-        >
-          <li
-            aria-hidden="true"
-          />
-        </ul>
-      </span>
     </div>
   </div>
   <div
     class="mt-4"
   >
     <a
-      class="align-center group relative inline-flex items-center justify-center overflow-hidden rounded rounded-md border border-transparent bg-transparent px-12 py-3 text-sm font-bold text-slate-100 hover:text-indigo-500 focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
+      class="align-center text-white-100 hover:text-white-500 group relative inline-flex items-center justify-center overflow-hidden rounded rounded-md border border-transparent bg-transparent px-12 py-3 text-sm font-bold focus:outline-none focus:ring active:bg-indigo-600 active:text-white"
       href="/about"
     >
       <span
-        class="ease absolute left-0 top-0 h-0 w-0 rounded-md border-t-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+        class="ease border-white-500 absolute left-0 top-0 h-0 w-0 rounded-md border-t-2 transition-all duration-200 group-hover:w-full"
       />
       <span
-        class="ease absolute right-0 top-0 h-0 w-0 rounded-md border-r-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
+        class="ease border-white-500 absolute right-0 top-0 h-0 w-0 rounded-md border-r-2 transition-all duration-200 group-hover:h-full"
       />
       <span
-        class="ease absolute bottom-0 right-0 h-0 w-0 rounded-md border-b-2 border-indigo-500 transition-all duration-200 group-hover:w-full"
+        class="ease border-white-500 absolute bottom-0 right-0 h-0 w-0 rounded-md border-b-2 transition-all duration-200 group-hover:w-full"
       />
       <span
-        class="ease absolute bottom-0 left-0 h-0 w-0 rounded-md border-l-2 border-indigo-500 transition-all duration-200 group-hover:h-full"
+        class="ease border-white-500 absolute bottom-0 left-0 h-0 w-0 rounded-md border-l-2 transition-all duration-200 group-hover:h-full"
       />
       <span
         class="flex items-center justify-center align-middle"

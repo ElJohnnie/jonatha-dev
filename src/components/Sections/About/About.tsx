@@ -7,7 +7,7 @@ export default function About({
   postDescription,
   features,
   image,
-}: AboutProps) {
+}: Readonly<AboutProps>) {
   return (
     <section className='mt-4 h-auto pt-4'>
       <div className='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:py-16'>
@@ -15,7 +15,6 @@ export default function About({
           {image && (
             <div className='top-[12vh] hidden h-auto place-self-start md:fixed lg:mt-0 lg:flex'>
               <Image
-                className='filter-grayscale'
                 src={'/images/jonatha.png'}
                 alt='profile'
                 width={550}
@@ -25,7 +24,7 @@ export default function About({
           )}
         </div>
         <div className='mr-auto place-self-center md:col-span-5 lg:max-w-lg'>
-          <h2 className='text-base font-semibold leading-7 text-indigo-600'>
+          <h2 className='text-base font-semibold leading-7 text-slate-600'>
             {title}
           </h2>
           <p className='mt-2 text-3xl font-bold tracking-tight sm:text-4xl dark:text-white'>
@@ -39,7 +38,7 @@ export default function About({
               <div key={feature.name} className='relative pl-9'>
                 <dt className='inline font-semibold text-white'>
                   <feature.icon
-                    className='absolute left-1 top-1 h-5 w-5 text-indigo-600'
+                    className='absolute left-1 top-1 h-5 w-5 text-slate-600'
                     aria-hidden='true'
                   />
                   {feature.name}

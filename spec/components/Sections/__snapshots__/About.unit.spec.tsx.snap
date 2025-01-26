@@ -15,7 +15,6 @@ exports[`should render correctly About component match snapshot 1`] = `
       >
         <img
           alt="profile"
-          class="filter-grayscale"
           data-nimg="1"
           decoding="async"
           height="550"
@@ -31,7 +30,7 @@ exports[`should render correctly About component match snapshot 1`] = `
       class="mr-auto place-self-center md:col-span-5 lg:max-w-lg"
     >
       <h2
-        class="text-base font-semibold leading-7 text-indigo-600"
+        class="text-base font-semibold leading-7 text-slate-600"
       >
         title
       </h2>
@@ -56,7 +55,7 @@ exports[`should render correctly About component match snapshot 1`] = `
           >
             <svg
               aria-hidden="true"
-              class="absolute left-1 top-1 h-5 w-5 text-indigo-600"
+              class="absolute left-1 top-1 h-5 w-5 text-slate-600"
               data-slot="icon"
               fill="currentColor"
               viewBox="0 0 20 20"

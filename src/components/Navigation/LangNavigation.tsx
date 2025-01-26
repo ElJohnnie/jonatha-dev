@@ -26,7 +26,7 @@ export default function LangNavigation() {
     <Listbox value={upperCaseLocale} onChange={handleSelect}>
       {({ open }) => (
         <div className='relative mt-2'>
-          <Listbox.Button className='text-white-900 relative block w-full cursor-default rounded-lg rounded-md px-3 py-1.5 py-2 text-left shadow-sm ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6 md:pl-3 md:pr-10 md:ring-1'>
+          <Listbox.Button className='text-white-900 relative block w-full cursor-default rounded-lg rounded-md px-3 py-1.5 py-2 text-left shadow-sm ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-slate-500 sm:text-sm sm:leading-6 md:pl-3 md:pr-10 md:ring-1'>
             <span className='flex items-center'>
               <span className='ml-3 block truncate'>{upperCaseLocale}</span>
             </span>
@@ -49,10 +49,10 @@ export default function LangNavigation() {
               {Array.isArray(upperCaseLocales) &&
                 upperCaseLocales.map((item, index) => (
                   <Listbox.Option
-                    key={index}
+                    key={item}
                     className={({ active }) =>
                       classNames(
-                        active ? 'bg-indigo-600' : '',
+                        active ? 'bg-slate-600' : '',
                         'relative cursor-default select-none py-2 pl-3 pr-9 text-white'
                       )
                     }
@@ -74,7 +74,7 @@ export default function LangNavigation() {
                         {selected ? (
                           <span
                             className={classNames(
-                              active ? 'text-white' : 'text-indigo-600',
+                              active ? 'text-white' : 'text-white-600',
                               'absolute inset-y-0 right-0 flex items-center pr-4'
                             )}
                           >

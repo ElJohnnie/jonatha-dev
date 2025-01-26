@@ -17,9 +17,8 @@
 }
 
 body {
-  background: #020617;
+  background: #000000;
   background-size: 400% 400%;
-  /* animation: gradient 30s ease infinite; */
   height: 100vh;
   color: rgb(var(--foreground-rgb));
 }
@@ -55,11 +54,11 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.indigo.600');
+  background: theme('colors.slate.600');
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: theme('colors.indigo.700');
+  background: theme('colors.slate.700');
 }
