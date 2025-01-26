@@ -25,7 +25,7 @@ export default function Article({ content, tagPosts }: Readonly<ArticleProps>) {
           <div className='md:col-span-1'>
             <div className='mx-2 max-w-full md:mx-auto md:max-w-screen-md'>
               <h3 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-4xl dark:text-white'>
-                <span className='leading-12 block w-full bg-gradient-to-r from-indigo-700 to-fuchsia-500 bg-clip-text text-transparent lg:inline'>
+                <span className='leading-12 block w-full bg-gradient-to-r from-slate-700 to-slate-500 bg-clip-text text-transparent lg:inline'>
                   Artigos relacionados
                 </span>
               </h3>
