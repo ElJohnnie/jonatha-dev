@@ -29,12 +29,12 @@ export default function NavHeader() {
       {
         label: t('about'),
         href: `/${currentLocale}/about`,
-        current: pathname && pathname.includes(`/about`),
+        current: pathname?.includes(`/about`),
       },
       {
         label: t('blog'),
         href: `/${currentLocale}/blog`,
-        current: pathname && pathname.includes(`/blog`),
+        current: pathname?.includes(`/blog`),
       },
     ];
   }, [t, pathname, currentLocale]);
@@ -70,8 +70,8 @@ export default function NavHeader() {
               href={item.href}
               className={classNames(
                 item.current
-                  ? 'bg-indigo-600 text-white'
-                  : 'text-gray-300 hover:bg-indigo-950 hover:text-white',
+                  ? 'bg-slate-900 text-white'
+                  : 'hover:bg-slate text-gray-300 hover:text-white',
                 'rounded-md px-3 py-2 text-sm font-medium'
               )}
               aria-current={item.current ? 'page' : undefined}
