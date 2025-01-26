@@ -17,18 +17,33 @@ export default function AboutPage({ params }: Readonly<AboutProps>) {
 
   const features = [
     {
+      name: 'Universidade do Vale do Rio dos Sinos:',
+      description: t('experience-0'),
+      icon: AcademicCapIcon,
+    },
+    {
       name: 'Universidade de Santa Cruz do sul:',
       description: t('experience-1'),
       icon: AcademicCapIcon,
     },
     {
-      name: 'Software Engineer Mid-level, Vivo (Telefônica) B2C:',
+      name: 'Software Devloper Full Stack, Vivo (Telefônica) B2C:',
       description: t('experience-2'),
       icon: CodeBracketSquareIcon,
     },
     {
-      name: 'Software Engineer Junior, Vivo (Telefônica) B2B:',
+      name: 'Software Devloper Full Stack, Vivo (Telefônica) B2B:',
       description: t('experience-3'),
+      icon: CodeBracketSquareIcon,
+    },
+    {
+      name: 'UNISC scholarship program intern - ReactJS front-end:',
+      description: t('experience-4'),
+      icon: CodeBracketSquareIcon,
+    },
+    {
+      name: 'Independent developer:',
+      description: t('experience-5'),
       icon: CodeBracketSquareIcon,
     },
   ];
