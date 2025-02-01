@@ -1,6 +1,6 @@
-import { BlogProp } from './types';
+import { BlogViewProp } from "../types";
 
-export default function Blog({ children }: Readonly<BlogProp>) {
+export default function BlogView({ children }: Readonly<BlogViewProp>) {
   return (
     <section className='h-100 mt-2 pt-2'>
       <div className='mx-auto max-w-7xl justify-center px-4 md:py-12'>

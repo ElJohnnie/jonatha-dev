@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import AnimateButton from '../../Buttons/AnimateButton';
-import { HeroProps } from './types';
-import DecryptedText from '@/components/Texts/DecryptedText';
+import AnimateButton from '../../../../components/buttons/animated-button.component';
+import { HomeViewProps } from '../types';
+import DecryptedText from '@/components/texts/decrypted-text.component';
 
-export default function Hero({
+export default function HomeView({
   title,
   description,
   linkButton,
   image,
-}: Readonly<HeroProps>) {
+}: Readonly<HomeViewProps>) {
   return (
     <section className='flex h-auto h-full flex-col items-center justify-center'>
       {image && (

@@ -1,4 +1,4 @@
-import { ArticleElementComponent } from './types';
+import { ArticleElementComponent } from '../types';
 import Link from 'next/link';
 import Image from 'next/image';
 

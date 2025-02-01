@@ -1,4 +1,4 @@
-export interface HeroProps {
+export interface HomeViewProps {
   title: string;
   description?: string;
   solutions?: string[];

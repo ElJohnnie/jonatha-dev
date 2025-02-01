@@ -1,7 +1,7 @@
-import { NavHeader } from '@/components/Navigation';
+import NavHeader from '@/components/navigation/nav-header.component';
 import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/footer/footer.component';
 import type { Metadata } from 'next';
 
 interface LocaleLayout {

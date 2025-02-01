@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Logo from '../../../public/JF.png';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import LangNavigation from './LangNavigation';
+import LangNavigation from './lang-navigation.component';
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
