@@ -24,7 +24,7 @@ export async function getAllPosts(): Promise<
       filter: {
         or: [
           {
-            property: 'avaible',
+            property: 'available',
             checkbox: {
               equals: true,
             },
@@ -32,8 +32,6 @@ export async function getAllPosts(): Promise<
         ],
       },
     });
-
-    console.log('Notion response:', response);
 
     const typedResponse = response as unknown as NotionDatabaseResponse;
 
@@ -48,8 +46,6 @@ export async function getAllPosts(): Promise<
         tags: post.properties.tags.multi_select[0].name,
       };
     });
-
-    console.log('Parsed posts:', posts);
 
     return posts;
   } catch (err) {
@@ -76,8 +72,6 @@ export async function getPost(slug: string): Promise<any> {
         ],
       },
     });
-
-    console.log('Notion response for getPost:', response);
 
     const pageId = response.results[0].id;
     const n2mAdapter = new NotionToMarkdownAdapter({
@@ -110,7 +104,7 @@ export async function getPostsByTag(tag: string, slug: string): Promise<any> {
         ],
         and: [
           {
-            property: 'avaible',
+            property: 'available',
             checkbox: {
               equals: true,
             },
@@ -125,8 +119,6 @@ export async function getPostsByTag(tag: string, slug: string): Promise<any> {
       },
     });
 
-    console.log('Notion response for getPostsByTag:', response);
-
     const typedResponse = response as unknown as NotionDatabaseResponse;
 
     const posts = typedResponse.results.map((post) => {
@@ -140,8 +132,6 @@ export async function getPostsByTag(tag: string, slug: string): Promise<any> {
         tags: post.properties.tags.multi_select[0].name,
       };
     });
-
-    console.log('Parsed posts by tag:', posts);
 
     return posts;
   } catch (err) {
