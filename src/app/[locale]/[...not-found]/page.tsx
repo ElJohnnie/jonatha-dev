@@ -1,2 +1,2 @@
-import NotFoundCatchAll from "./controller/not-found.controller";
+import NotFoundCatchAll from './controller/not-found.controller';
 export default NotFoundCatchAll;

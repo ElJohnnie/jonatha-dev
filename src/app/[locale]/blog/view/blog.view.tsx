@@ -1,4 +1,4 @@
-import { BlogViewProp } from "../types";
+import { BlogViewProp } from '../types';
 
 export default function BlogView({ children }: Readonly<BlogViewProp>) {
   return (

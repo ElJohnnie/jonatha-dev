@@ -1,2 +1,2 @@
-import HomeController from "../page";
+import HomeController from '../page';
 export default HomeController;

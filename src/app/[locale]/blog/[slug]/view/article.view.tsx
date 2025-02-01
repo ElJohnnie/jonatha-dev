@@ -12,7 +12,10 @@ function AsidePosts({ tagPosts }: Readonly<Pick<ArticleProps, 'tagPosts'>>) {
   );
 }
 
-export default function ArticleView({ content, tagPosts }: Readonly<ArticleProps>) {
+export default function ArticleView({
+  content,
+  tagPosts,
+}: Readonly<ArticleProps>) {
   return (
     <section className='mt-4 h-auto pt-4'>
       <div className='mx-auto max-w-screen-sm justify-center md:max-w-screen-2xl md:py-12'>
