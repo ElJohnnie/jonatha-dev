@@ -40,7 +40,7 @@ export interface Parent {
 }
 
 export interface Properties {
-  avaible: Avaible;
+  available: available;
   tags: Tags;
   date: Date;
   author: Author;
@@ -48,7 +48,7 @@ export interface Properties {
   page: Page;
 }
 
-export interface Avaible {
+export interface available {
   id: string;
   type: string;
   checkbox: boolean;
