@@ -17,7 +17,7 @@
 }
 
 body {
-  background: #000000;
+  background: #09090b;
   background-size: 400% 400%;
   height: 100vh;
   color: rgb(var(--foreground-rgb));

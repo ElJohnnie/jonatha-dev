@@ -96,7 +96,7 @@ export default function NavHeader() {
         onClose={setMobileMenuOpen}
       >
         <div className='fixed inset-0 z-10' />
-        <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-slate-950 px-6 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
+        <Dialog.Panel className='fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-zinc-950 px-6 py-2 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10'>
           <div className='flex items-center justify-between'>
             <Link
               href='/'
@@ -122,8 +122,8 @@ export default function NavHeader() {
                     href={item.href}
                     className={classNames(
                       item.current
-                        ? 'bg-indigo-600 text-white'
-                        : 'text-gray-300 hover:bg-indigo-950 hover:text-white',
+                        ? 'bg-slate-600 text-white'
+                        : 'text-gray-300 hover:bg-slate-950 hover:text-white',
                       'mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7'
                     )}
                     onClick={() => setMobileMenuOpen(false)}
