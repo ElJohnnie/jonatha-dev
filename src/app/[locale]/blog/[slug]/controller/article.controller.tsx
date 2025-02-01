@@ -1,17 +1,28 @@
+import { GetServerSideProps } from 'next';
 import ArticleView from '@/app/[locale]/blog/[slug]/view/article.view';
-
 import { getPost, getPostsByTag } from '@/services/notion';
+import { ArticleProps } from '../../types';
 
-export default async function ArticleController({
-  params,
-  searchParams,
-}: Readonly<{
-  params: { slug: string };
-  searchParams: { [key: string]: string };
-}>) {
-  const contentPost = getPost(params.slug);
-  const postsByTag = getPostsByTag(searchParams.tag, params.slug);
-  const [content, tagPosts] = await Promise.all([contentPost, postsByTag]);
-
+export default function ArticleController({
+  content,
+  tagPosts,
+}: Readonly<ArticleProps>) {
   return <ArticleView content={content} tagPosts={tagPosts} />;
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { params, query } = context;
+  const slug = params?.slug as string;
+  const tag = query.tag as string;
+
+  const contentPost = getPost(slug);
+  const postsByTag = getPostsByTag(tag, slug);
+  const [content, tagPosts] = await Promise.all([contentPost, postsByTag]);
+
+  return {
+    props: {
+      content,
+      tagPosts,
+    },
+  };
+};

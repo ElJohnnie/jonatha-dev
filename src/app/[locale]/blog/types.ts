@@ -21,3 +21,7 @@ export interface ArticleProps {
   content: any;
   tagPosts: Post[];
 }
+
+export interface BlogControllerProps {
+  posts: Post[];
+}
