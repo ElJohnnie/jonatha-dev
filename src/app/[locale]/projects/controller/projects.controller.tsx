@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ArticleElement from '@/app/[locale]/projects/components/projects-element.component';
 import ProjectsView from '../view/projects.view';
-import { getAllPosts } from '@/services/notion';
+import { getAllPosts } from '@/services/notion.blog';
 import { useTranslations } from 'next-intl';
 import LoadingComponent from '@/components/loading/loading.component';
 import EmptyBlog from '../components/empty-blog.component';

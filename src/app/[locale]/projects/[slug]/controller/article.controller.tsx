@@ -1,6 +1,6 @@
 import ArticleView from '@/app/[locale]/projects/[slug]/view/article.view';
 
-import { getPost } from '@/services/notion';
+import { getPost } from '@/services/notion.blog';
 
 export default async function ArticleController({
   params,

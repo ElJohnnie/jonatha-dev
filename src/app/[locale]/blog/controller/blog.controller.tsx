@@ -1,7 +1,5 @@
-import { GetServerSideProps } from 'next';
 import ArticleElement from '@/app/[locale]/blog/components/article-element.component';
 import BlogView from '../view/blog.view';
-import { getAllPosts } from '@/services/notion';
 import { useTranslations } from 'next-intl';
 import EmptyBlog from '../components/empty-blog.component';
 import { BlogControllerProps } from '../types';
@@ -21,13 +19,3 @@ export default function BlogController({ posts }: BlogControllerProps) {
     <EmptyBlog text={t('empty')} />
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const posts = await getAllPosts();
-
-  return {
-    props: {
-      posts,
-    },
-  };
-};
