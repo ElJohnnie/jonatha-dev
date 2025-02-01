@@ -3,6 +3,7 @@ import { NextIntlClientProvider, useLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/footer/footer.component';
 import type { Metadata } from 'next';
+import { Analytics } from "@vercel/analytics/react"
 
 interface LocaleLayout {
   children: React.ReactNode;
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
             <Footer />
           </div>
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
