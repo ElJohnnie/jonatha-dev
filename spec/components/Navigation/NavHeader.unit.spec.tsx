@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavHeader } from '../../../src/components/Navigation';
+import NavHeader from '@/components/navigation/nav-header.component';
 import { render } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 

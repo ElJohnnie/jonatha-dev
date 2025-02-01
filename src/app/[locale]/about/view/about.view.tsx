@@ -1,13 +1,14 @@
-import { AboutProps } from './types';
+import React from 'react';
+import { AboutViewProps } from '../types';
 import Image from 'next/image';
 
-export default function About({
+export default function AboutView({
   title,
   description,
   postDescription,
   features,
   image,
-}: Readonly<AboutProps>) {
+}: Readonly<AboutViewProps>) {
   return (
     <section className='mt-4 h-auto pt-4'>
       <div className='mx-auto grid max-w-screen-xl px-4 py-8 lg:grid-cols-12 lg:py-16'>

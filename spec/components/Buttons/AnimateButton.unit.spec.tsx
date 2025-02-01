@@ -1,4 +1,4 @@
-import { AnimateButton } from '@/components/Buttons';
+import AnimateButton from '@/components/buttons/animated-button.component';
 import { render } from '@testing-library/react';
 
 const props = {

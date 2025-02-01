@@ -1,6 +1,2 @@
-'use client';
-import { notFound } from 'next/navigation';
-
-export default function NotFoundCatchAll() {
-  notFound();
-}
+import NotFoundCatchAll from './controller/not-found.controller';
+export default NotFoundCatchAll;

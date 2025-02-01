@@ -1,4 +1,4 @@
-import { Hero } from '@/components/Sections';
+import HomeView from '@/app/[locale]/home/view/home.view';
 import { render } from '@testing-library/react';
 
 const heroMockup = {
@@ -26,7 +26,7 @@ describe('should render correctly Hero component', () => {
   });
 
   it('match snapshot', () => {
-    const { container } = render(<Hero {...heroMockup}></Hero>);
+    const { container } = render(<HomeView {...heroMockup}></HomeView>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

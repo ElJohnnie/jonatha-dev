@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer } from '@/components/Footer';
+import Footer from '@/components/footer/footer.component';
 import { render } from '@testing-library/react';
 import { NextIntlClientProvider } from 'next-intl';
 

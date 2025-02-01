@@ -1,8 +1,8 @@
-import { About } from '@/components/Sections';
+import AboutView from '@/app/[locale]/about/view/about.view';
 import { render } from '@testing-library/react';
 import { AcademicCapIcon } from '@heroicons/react/20/solid';
 
-const heroMockup = {
+const aboutMockup = {
   title: 'title',
   description: 'description',
   postDescription: 'post-description',
@@ -18,7 +18,7 @@ const heroMockup = {
 
 describe('should render correctly About component', () => {
   it('match snapshot', () => {
-    const { container } = render(<About {...heroMockup}></About>);
+    const { container } = render(<AboutView {...aboutMockup}></AboutView>);
     expect(container.firstChild).toMatchSnapshot();
   });
 });

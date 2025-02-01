@@ -4,7 +4,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '../../locale/navigation';
-import { toUppercaseUtil } from '@/utils/toUppercaseUtil';
+import { toUppercaseUtil } from '@/utils/to-upper-case.util';
 import { locales } from '@/locale/languages';
 
 const classNames = (...classes: string[]) => {

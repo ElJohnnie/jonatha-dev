@@ -13,7 +13,7 @@ export interface ArticleElementComponent {
   post: Post;
 }
 
-export interface BlogProp {
+export interface BlogViewProp {
   children: React.ReactNode;
 }
 
