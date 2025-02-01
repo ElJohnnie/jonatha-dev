@@ -1,8 +1,10 @@
 'use server';
 
 import { NotionDatabaseResponse } from './types';
-import { notion, databaseId } from '@/config/notion.config';
 import NotionToMarkdownAdapter from '@/adapters/notion-to-markdown.adapter';
+import NotionBlogConfig from '@/config/notion-blog.config';
+
+const notionBlogConfig = new NotionBlogConfig();
 
 export async function getAllPosts(): Promise<
   | {
@@ -17,8 +19,8 @@ export async function getAllPosts(): Promise<
   | []
 > {
   try {
-    const response = await notion.databases.query({
-      database_id: databaseId,
+    const response = await notionBlogConfig.getClient().databases.query({
+      database_id: notionBlogConfig.getDatabaseId(),
       filter: {
         or: [
           {
@@ -30,6 +32,8 @@ export async function getAllPosts(): Promise<
         ],
       },
     });
+
+    console.log('Notion response:', response);
 
     const typedResponse = response as unknown as NotionDatabaseResponse;
 
@@ -45,8 +49,11 @@ export async function getAllPosts(): Promise<
       };
     });
 
+    console.log('Parsed posts:', posts);
+
     return posts;
   } catch (err) {
+    console.error('Error fetching posts:', err);
     console.warn(
       `Failed to load Notion posts, have you run the create-table script?`
     );
@@ -56,8 +63,8 @@ export async function getAllPosts(): Promise<
 
 export async function getPost(slug: string): Promise<any> {
   try {
-    const response = await notion.databases.query({
-      database_id: databaseId,
+    const response = await notionBlogConfig.getClient().databases.query({
+      database_id: notionBlogConfig.getDatabaseId(),
       filter: {
         or: [
           {
@@ -70,12 +77,17 @@ export async function getPost(slug: string): Promise<any> {
       },
     });
 
+    console.log('Notion response for getPost:', response);
+
     const pageId = response.results[0].id;
-    const n2mAdapter = new NotionToMarkdownAdapter({ notionClient: notion });
+    const n2mAdapter = new NotionToMarkdownAdapter({
+      notionClient: notionBlogConfig.getClient(),
+    });
 
     const mdString = await n2mAdapter.pageToMarkdownAndString(pageId);
     return { content: mdString.parent };
   } catch (err) {
+    console.error('Error fetching post:', err);
     console.warn(
       `Failed to load the post, have you run the create-table script?`
     );
@@ -85,8 +97,8 @@ export async function getPost(slug: string): Promise<any> {
 
 export async function getPostsByTag(tag: string, slug: string): Promise<any> {
   try {
-    const response = await notion.databases.query({
-      database_id: databaseId,
+    const response = await notionBlogConfig.getClient().databases.query({
+      database_id: notionBlogConfig.getDatabaseId(),
       filter: {
         or: [
           {
@@ -113,6 +125,8 @@ export async function getPostsByTag(tag: string, slug: string): Promise<any> {
       },
     });
 
+    console.log('Notion response for getPostsByTag:', response);
+
     const typedResponse = response as unknown as NotionDatabaseResponse;
 
     const posts = typedResponse.results.map((post) => {
@@ -127,8 +141,11 @@ export async function getPostsByTag(tag: string, slug: string): Promise<any> {
       };
     });
 
+    console.log('Parsed posts by tag:', posts);
+
     return posts;
   } catch (err) {
+    console.error('Error fetching posts by tag:', err);
     console.warn(
       `Failed to load the post, have you run the create-table script?`
     );

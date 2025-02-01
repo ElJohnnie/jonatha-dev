@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next';
 import ArticleView from '@/app/[locale]/blog/[slug]/view/article.view';
-import { getPost, getPostsByTag } from '@/services/notion';
+import { getPost, getPostsByTag } from '@/services/notion.blog';
 import { ArticleProps } from '../../types';
 
 export default function ArticleController({
