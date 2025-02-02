@@ -1,18 +1,20 @@
-import { Metadata } from "next";
-import ArticleController from "./controller/article.controller";
-import { getPost, getPostsByTag } from "@/services/notion.blog";
+import { Metadata } from 'next';
+import ArticleController from './controller/article.controller';
+import { getPost, getPostsByTag } from '@/services/notion.blog';
 
 interface PageProps {
   params: { slug: string };
   searchParams: { tag: string };
 }
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const post = await getPost(params.slug);
 
   if (!post) {
     return {
-      title: "Post não encontrado",
-      description: "O post que você está procurando não existe.",
+      title: 'Post não encontrado',
+      description: 'O post que você está procurando não existe.',
     };
   }
 
@@ -23,10 +25,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: post.title,
       description: post.description,
       url: `/blog/${params.slug}`,
-      type: "article",
+      type: 'article',
       images: [
         {
-          url: "/images/jonatha.png",
+          url: '/images/jonatha.png',
           width: 1200,
           height: 630,
           alt: post.title,
@@ -34,15 +36,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: post.title,
       description: post.description,
-      images: ["/images/jonatha.png"],
+      images: ['/images/jonatha.png'],
     },
   };
 }
 
-export default async function Page({ params, searchParams }: Readonly<PageProps>) {
+export default async function Page({
+  params,
+  searchParams,
+}: Readonly<PageProps>) {
   const slug = params.slug;
   const tag = searchParams.tag;
 
