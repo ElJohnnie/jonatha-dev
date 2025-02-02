@@ -6,10 +6,11 @@ export default async function ArticleController({
   params,
   searchParams,
 }: Readonly<{
-  params: { slug: string };
+  params: { slug: string; locale: string };
   searchParams: { [key: string]: string };
 }>) {
-  const contentPost = getPost(params.slug);
+  const { locale } = params;
+  const contentPost = getPost(params.slug, locale);
   const [content] = await Promise.all([contentPost]);
 
   return <ArticleView content={content} />;

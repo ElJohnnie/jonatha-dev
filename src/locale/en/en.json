@@ -16,7 +16,8 @@
     "experience-5": "I worked as a freelance web application developer for advertising companies, focusing on complete end-to-end projects. I used technologies like Laravel to build robust back-ends, while on the front-end I developed intuitive and dynamic interfaces"
   },
   "Blog": {
-    "empty": "There are no articles available yet"
+    "empty": "There are no articles available yet",
+    "relational": "Related Articles"
   },
   "Projects": {
     "title": "Under development!"

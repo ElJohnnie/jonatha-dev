@@ -16,7 +16,8 @@
     "experience-5": "Atuei como desenvolvedor autônomo de aplicações web para empresas de publicidade, com foco em projetos completos de ponta a ponta. Utilizei tecnologias como Laravel para construir back-ends robustos, enquanto no front-end desenvolvi interfaces intuitivas e dinâmicas."
   },
   "Blog": {
-    "empty": "Não há artigos disponíveis ainda"
+    "empty": "Não há artigos disponíveis ainda",
+    "relational": "Artigos Relacionados"
   },
   "Projects": {
     "title": "Em desenvolvimento!"
