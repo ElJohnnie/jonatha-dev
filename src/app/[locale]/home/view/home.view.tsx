@@ -10,7 +10,7 @@ export default function HomeView({
   image,
 }: Readonly<HomeViewProps>) {
   return (
-    <section className='flex h-auto h-full flex-col items-center justify-center'>
+    <section className='flex h-full flex-col items-center justify-center'>
       {image && (
         <div>
           <Image

@@ -36,6 +36,11 @@
     "error": "Error",
     "hasError": "An unexpected error has occurred."
   },
+  "BlogError": {
+    "error": "Sorry!",
+    "description": "But we couldn't find this post, maybe it's not available in that language or there was an error in external services.",
+    "button": "Back to blog"
+  },
   "NotFoundError": {
     "error": "Erro",
     "hasError": "Page not found"
