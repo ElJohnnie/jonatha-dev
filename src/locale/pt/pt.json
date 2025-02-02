@@ -36,6 +36,11 @@
     "error": "Erro",
     "hasError": "Ocorreu um erro inesperado"
   },
+  "BlogError": {
+    "error": "Desculpe!",
+    "hasError": "Mas não encontramos esse post, talvez não esteja disponível nessa língua ou aconteceu um erro nos serviços externos.",
+    "button": "Voltar para o blog"
+  },
   "NotFoundError": {
     "error": "Erro",
     "hasError": "Página não encontrada"
