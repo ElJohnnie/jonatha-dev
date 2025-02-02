@@ -65,15 +65,13 @@ export async function getPost(slug: string, lang: string): Promise<any> {
     const response = await notionBlogConfig.getClient().databases.query({
       database_id: notionBlogConfig.getDatabaseId(),
       filter: {
-        or: [
+        and: [
           {
             property: 'slug',
             rich_text: {
               equals: slug,
             },
           },
-        ],
-        and: [
           {
             property: 'available',
             checkbox: {
@@ -103,6 +101,7 @@ export async function getPost(slug: string, lang: string): Promise<any> {
     };
 
     const pageId = typedResponse.results[0].id;
+
     const n2mAdapter = new NotionToMarkdownAdapter({
       notionClient: notionBlogConfig.getClient(),
     });
@@ -126,15 +125,13 @@ export async function getPostsByTag(
     const response = await notionBlogConfig.getClient().databases.query({
       database_id: notionBlogConfig.getDatabaseId(),
       filter: {
-        or: [
+        and: [
           {
             property: 'tags',
             multi_select: {
               contains: tag,
             },
           },
-        ],
-        and: [
           {
             property: 'available',
             checkbox: {
