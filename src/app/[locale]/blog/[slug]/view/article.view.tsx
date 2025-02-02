@@ -26,7 +26,7 @@ export default function ArticleView({
           <div className='grid grid-cols-1 gap-4 md:grid-cols-4'>
             <div className='md:col-span-3'>
               <div className='mx-2 max-w-full md:mx-auto md:max-w-screen-lg'>
-                <Markdown>{content.content}</Markdown>
+                <Markdown>{content}</Markdown>
               </div>
             </div>
             <div className='md:col-span-1'>
