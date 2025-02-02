@@ -15,6 +15,8 @@ export async function getAllPosts(): Promise<
       author: string;
       avatar: string;
       tags: string;
+      lang?: string;
+      description?: string;
     }[]
   | []
 > {
@@ -44,6 +46,7 @@ export async function getAllPosts(): Promise<
         author: post.properties.author.people[0].name,
         avatar: post.properties.author.people[0].avatar_url,
         tags: post.properties.tags.multi_select[0].name,
+        lang: post.properties.lang.rich_text[0].plain_text,
       };
     });
 

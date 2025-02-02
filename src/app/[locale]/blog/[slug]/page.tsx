@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import ArticleController from './controller/article.controller';
 import { getPost, getPostsByTag } from '@/services/notion.blog';
+import { useLocale } from 'next-intl';
 
 interface PageProps {
   params: { slug: string };
@@ -48,6 +49,7 @@ export default async function Page({
   params,
   searchParams,
 }: Readonly<PageProps>) {
+  const locale = useLocale();
   const slug = params.slug;
   const tag = searchParams.tag;
 
@@ -56,5 +58,9 @@ export default async function Page({
     getPostsByTag(tag, slug),
   ]);
 
-  return <ArticleController content={content} tagPosts={tagPosts} />;
+  const filteredPosts = tagPosts.filter(
+    (post: { lang: string }) => post.lang === locale
+  );
+
+  return <ArticleController content={content} tagPosts={filteredPosts} />;
 }

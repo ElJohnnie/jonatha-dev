@@ -40,15 +40,17 @@ export interface Parent {
 }
 
 export interface Properties {
-  available: available;
+  available: Available;
   tags: Tags;
   date: Date;
   author: Author;
   slug: Slug;
   page: Page;
+  lang: Lang;
+  description: Description;
 }
 
-export interface available {
+export interface Available {
   id: string;
   type: string;
   checkbox: boolean;
@@ -149,6 +151,18 @@ export interface Annotations2 {
   underline: boolean;
   code: boolean;
   color: string;
+}
+
+export interface Lang {
+  id: string;
+  type: string;
+  rich_text: RichText[];
+}
+
+export interface Description {
+  id: string;
+  type: string;
+  rich_text: RichText[];
 }
 
 export interface PageOrDatabase {}

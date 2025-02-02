@@ -1,6 +1,7 @@
 import Markdown from 'react-markdown';
 import { ArticleProps } from '../../types';
 import ArticleElement from '../../components/article-element.component';
+import { useTranslations } from 'next-intl';
 
 function AsidePosts({ tagPosts }: Readonly<Pick<ArticleProps, 'tagPosts'>>) {
   return (
@@ -16,6 +17,8 @@ export default function ArticleView({
   content,
   tagPosts,
 }: Readonly<ArticleProps>) {
+  const t = useTranslations('Blog');
+
   return (
     <>
       <section className='mt-4 h-auto pt-4'>
@@ -30,7 +33,7 @@ export default function ArticleView({
               <div className='mx-2 max-w-full md:mx-auto md:max-w-screen-md'>
                 <h3 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-4xl dark:text-white'>
                   <span className='leading-12 block w-full bg-gradient-to-r from-slate-700 to-slate-500 bg-clip-text text-transparent lg:inline'>
-                    Artigos relacionados
+                    {t('relational')}{' '}
                   </span>
                 </h3>
                 <AsidePosts tagPosts={tagPosts} />
