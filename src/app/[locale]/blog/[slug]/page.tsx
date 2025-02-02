@@ -7,7 +7,9 @@ interface PageProps {
   searchParams?: { tag?: string };
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug, locale } = params;
   const postResult = await getPost(slug, locale);
 
