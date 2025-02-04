@@ -1,6 +1,7 @@
 import ArticleController from './controller/article.controller';
 import { getPost, getPostsByTag } from '@/services/notion.blog';
 import { Metadata } from 'next';
+import getFirstImageUrl from '@/utils/get-first-image-url.util';
 
 interface PageProps {
   params: { slug: string; locale: string };
@@ -13,14 +14,15 @@ export async function generateMetadata({
   const { slug, locale } = params;
   const postResult = await getPost(slug, locale);
 
-  if (!postResult || !postResult.post) {
+  if (!postResult?.post) {
     return {
       title: 'Post não encontrado',
       description: 'O post que você está procurando não foi encontrado.',
     };
   }
 
-  const { post } = postResult;
+  const { post, content } = postResult;
+  const image = getFirstImageUrl(content);
 
   return {
     title: post.title,
@@ -34,7 +36,7 @@ export async function generateMetadata({
       authors: [post.author],
       images: [
         {
-          url: post.avatar,
+          url: image || '__blank',
           alt: post.title,
           width: 1200,
           height: 630,
@@ -45,7 +47,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.title,
       description: post.description || 'Descrição não disponível',
-      images: [post.avatar],
+      images: [image || '__blank'],
     },
   };
 }
