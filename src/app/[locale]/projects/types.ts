@@ -9,15 +9,18 @@ export interface Projects {
   avatar: string;
 }
 
-export interface ProjectsElementComponent {
-  post: Projects;
+export interface ProjectElementComponent {
+  project: Projects;
 }
 
-export interface ProjectsViewProp {
+export interface ProjectViewProp {
   children: React.ReactNode;
 }
 
-export interface ProjectsProps {
+export interface ProjectProps {
   content: any;
-  tagProjects?: Projects[];
+}
+
+export interface ProjectsControllerProps {
+  projects?: Projects[];
 }
