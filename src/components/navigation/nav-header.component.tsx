@@ -31,11 +31,11 @@ export default function NavHeader() {
         href: `/${currentLocale}/about`,
         current: pathname?.includes(`/about`),
       },
-      // {
-      //   label: t('projects'),
-      //   href: `/${currentLocale}/projects`,
-      //   current: pathname?.includes(`/projects`),
-      // },
+      {
+        label: t('projects'),
+        href: `/${currentLocale}/projects`,
+        current: pathname?.includes(`/projects`),
+      },
       {
         label: t('blog'),
         href: `/${currentLocale}/blog`,

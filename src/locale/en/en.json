@@ -20,7 +20,8 @@
     "relational": "Related Articles"
   },
   "Projects": {
-    "title": "Under development!"
+    "projects": "Projects",
+    "empty": "There are no projects available yet"
   },
   "Header": {
     "home": "Home",

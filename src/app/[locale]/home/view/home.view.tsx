@@ -2,6 +2,7 @@ import Image from 'next/image';
 import AnimateButton from '../../../../components/buttons/animated-button.component';
 import { HomeViewProps } from '../types';
 import DecryptedText from '@/components/texts/decrypted-text.component';
+import { useLocale } from 'next-intl';
 
 export default function HomeView({
   title,
@@ -9,6 +10,7 @@ export default function HomeView({
   linkButton,
   image,
 }: Readonly<HomeViewProps>) {
+  const locale = useLocale();
   return (
     <section className='flex h-full flex-col items-center justify-center'>
       {image && (
@@ -43,7 +45,7 @@ export default function HomeView({
         )}
       </div>
       <div className='mt-4'>
-        <AnimateButton title={linkButton ?? ''} route='/about' />
+        <AnimateButton title={linkButton ?? ''} route={`${locale}/about`} />
       </div>
     </section>
   );

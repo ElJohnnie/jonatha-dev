@@ -20,7 +20,8 @@
     "relational": "Artigos Relacionados"
   },
   "Projects": {
-    "title": "Em desenvolvimento!"
+    "projects": "Projetos",
+    "empty": "Não há projetos disponíveis ainda"
   },
   "Header": {
     "home": "Home",

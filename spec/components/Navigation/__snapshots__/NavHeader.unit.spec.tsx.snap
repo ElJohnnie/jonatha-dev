@@ -73,6 +73,12 @@ exports[`should render correctly NavHeader component match snapshot 1`] = `
       </a>
       <a
         class="hover:bg-slate text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        href="/en/projects"
+      >
+        Header.projects
+      </a>
+      <a
+        class="hover:bg-slate text-gray-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
         href="/en/blog"
       >
         Header.blog
