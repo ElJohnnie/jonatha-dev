@@ -5,7 +5,7 @@ export default function ProjectsView({ children }: Readonly<ProjectViewProp>) {
   const t = useTranslations('Projects');
 
   return (
-    <section className='mx-auto mb-12 max-w-7xl px-4 sm:px-6 lg:px-4'>
+    <section className='h-100 mt-2 pt-2'>
       <div className='mx-auto max-w-7xl justify-center px-4 md:py-12'>
         <div className='mx-auto lg:mx-0'>
           <h1 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-6xl dark:text-white'>

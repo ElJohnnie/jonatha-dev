@@ -1,22 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import ArticleElement from '@/app/[locale]/projects/components/projects-element.component';
+import React from 'react';
+import ProjectElement from '@/app/[locale]/projects/components/projects-element.component';
 import ProjectsView from '../view/projects.view';
-import EmptyBlog from '../components/empty-projects.component';
+import EmptyProject from '../components/empty-projects.component';
 import { ProjectsControllerProps } from '../types';
 import { useTranslations } from 'next-intl';
 
 export default function ProjectsController({
   projects,
+  images = [],
 }: ProjectsControllerProps) {
   const t = useTranslations('Projects');
 
-  return projects ? (
+  console.log(projects);
+
+  return projects?.length ? (
     <ProjectsView>
-      {projects.map((project) => (
-        <ArticleElement key={project.id} project={project} />
+      {projects.map((project, index) => (
+        <ProjectElement
+          key={project.id}
+          project={project}
+          image={images[index]}
+        />
       ))}
     </ProjectsView>
   ) : (
-    <EmptyBlog text={t('empty')} />
+    <EmptyProject text={t('empty')} />
   );
 }

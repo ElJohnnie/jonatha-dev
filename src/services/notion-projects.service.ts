@@ -2,11 +2,13 @@
 
 import { NotionDatabaseResponse } from './types';
 import NotionToMarkdownAdapter from '@/adapters/notion-to-markdown.adapter';
-import NotionBlogConfig from '@/config/notion-blog.config';
+import NotionConfig from '@/config/notion.config';
 
-const notionBlogConfig = new NotionBlogConfig();
+const notionBlogConfig = new NotionConfig(
+  process.env.NOTION_DATABASE_PROJECT_ID ?? ''
+);
 
-export async function getAllPosts(): Promise<
+export async function getAllProjects(): Promise<
   | {
       id: string;
       title: string;
@@ -37,7 +39,7 @@ export async function getAllPosts(): Promise<
 
     const typedResponse = response as unknown as NotionDatabaseResponse;
 
-    const posts = typedResponse.results.map((post) => {
+    const projects = typedResponse.results.map((post) => {
       return {
         id: post.id,
         title: post.properties.page.title[0].text.content,
@@ -50,7 +52,7 @@ export async function getAllPosts(): Promise<
       };
     });
 
-    return posts;
+    return projects;
   } catch (err) {
     console.error('Error fetching posts:', err);
     console.warn(
@@ -60,7 +62,7 @@ export async function getAllPosts(): Promise<
   }
 }
 
-export async function getPost(slug: string, lang: string): Promise<any> {
+export async function getProject(slug: string, lang: string): Promise<any> {
   try {
     const response = await notionBlogConfig.getClient().databases.query({
       database_id: notionBlogConfig.getDatabaseId(),
@@ -90,7 +92,7 @@ export async function getPost(slug: string, lang: string): Promise<any> {
 
     const typedResponse = response as unknown as NotionDatabaseResponse;
 
-    const postObject = {
+    const projectObject = {
       title: typedResponse.results[0].properties.page.title[0].text.content,
       slug: typedResponse.results[0].properties.slug.rich_text[0].plain_text,
       date: typedResponse.results[0].properties.date.date.start,
@@ -108,72 +110,10 @@ export async function getPost(slug: string, lang: string): Promise<any> {
 
     const mdString = await n2mAdapter.pageToMarkdownAndString(pageId);
 
-    const dto = { content: mdString.parent, post: postObject };
+    const dto = { content: mdString.parent, project: projectObject };
 
     return dto;
   } catch (err) {
-    return [];
-  }
-}
-
-export async function getPostsByTag(
-  tag: string,
-  slug: string,
-  lang: string
-): Promise<any> {
-  try {
-    const response = await notionBlogConfig.getClient().databases.query({
-      database_id: notionBlogConfig.getDatabaseId(),
-      filter: {
-        and: [
-          {
-            property: 'tags',
-            multi_select: {
-              contains: tag,
-            },
-          },
-          {
-            property: 'available',
-            checkbox: {
-              equals: true,
-            },
-          },
-          {
-            property: 'slug',
-            rich_text: {
-              does_not_equal: slug,
-            },
-          },
-          {
-            property: 'lang',
-            rich_text: {
-              equals: lang,
-            },
-          },
-        ],
-      },
-    });
-
-    const typedResponse = response as unknown as NotionDatabaseResponse;
-
-    const posts = typedResponse.results.map((post) => {
-      return {
-        id: post.id,
-        title: post.properties.page.title[0].text.content,
-        slug: post.properties.slug.rich_text[0].plain_text,
-        date: post.properties.date.date.start,
-        author: post.properties.author.people[0].name,
-        avatar: post.properties.author.people[0].avatar_url,
-        tags: post.properties.tags.multi_select[0].name,
-      };
-    });
-
-    return posts;
-  } catch (err) {
-    console.error('Error fetching posts by tag:', err);
-    console.warn(
-      `Failed to load the post, have you run the create-table script?`
-    );
     return [];
   }
 }

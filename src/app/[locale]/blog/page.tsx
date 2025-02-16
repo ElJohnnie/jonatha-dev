@@ -3,8 +3,8 @@ import { useLocale } from 'next-intl';
 
 export default async function Page() {
   const locale = useLocale();
-  const posts = await import('@/services/notion.blog').then((serverSide) =>
-    serverSide.getAllPosts()
+  const posts = await import('@/services/notion-blog.service').then((fetch) =>
+    fetch.getAllPosts()
   );
 
   const filteredPosts = posts.filter((post) => post.lang === locale);

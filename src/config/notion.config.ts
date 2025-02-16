@@ -1,12 +1,14 @@
+'use server';
+
 import { Client } from '@notionhq/client';
 
-class NotionProjectsConfig {
+class NotionConfig {
   private readonly notion: Client;
   private readonly databaseId: string;
 
-  constructor() {
+  constructor(databaseId: string) {
     this.notion = new Client({ auth: process.env.NOTION_API_KEY });
-    this.databaseId = process.env.NOTION_DATABASE_ID ?? '';
+    this.databaseId = databaseId;
   }
 
   getClient(): Client {
@@ -18,4 +20,4 @@ class NotionProjectsConfig {
   }
 }
 
-export default NotionProjectsConfig;
+export default NotionConfig;

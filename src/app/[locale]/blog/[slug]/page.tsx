@@ -1,7 +1,7 @@
 import ArticleController from './controller/article.controller';
-import { getPost, getPostsByTag } from '@/services/notion.blog';
+import { getPost, getPostsByTag } from '@/services/notion-blog.service';
 import { Metadata } from 'next';
-import getFirstImageUrl from '@/utils/get-first-image-url.util';
+import { getFirstImageUrl } from '@/utils/get-image-url.util';
 
 interface PageProps {
   params: { slug: string; locale: string };
@@ -36,7 +36,7 @@ export async function generateMetadata({
       authors: [post.author],
       images: [
         {
-          url: image || '__blank',
+          url: image ?? '__blank',
           alt: post.title,
           width: 1200,
           height: 630,
@@ -47,7 +47,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.title,
       description: post.description || 'Descrição não disponível',
-      images: [image || '__blank'],
+      images: [image ?? '__blank'],
     },
   };
 }
