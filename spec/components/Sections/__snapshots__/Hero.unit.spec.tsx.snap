@@ -88,7 +88,7 @@ exports[`should render correctly Hero component match snapshot 1`] = `
   >
     <a
       class="align-center text-white-100 hover:text-white-500 group relative inline-flex items-center justify-center overflow-hidden rounded rounded-md border border-transparent bg-transparent px-12 py-3 text-sm font-bold focus:outline-none focus:ring active:bg-slate-600 active:text-white"
-      href="/about"
+      href="en/about"
     >
       <span
         class="ease border-white-500 absolute left-0 top-0 h-0 w-0 rounded-md border-t-2 transition-all duration-200 group-hover:w-full"

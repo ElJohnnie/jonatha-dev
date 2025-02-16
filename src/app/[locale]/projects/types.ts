@@ -11,6 +11,7 @@ export interface Projects {
 
 export interface ProjectElementComponent {
   project: Projects;
+  image?: string;
 }
 
 export interface ProjectViewProp {
@@ -23,4 +24,5 @@ export interface ProjectProps {
 
 export interface ProjectsControllerProps {
   projects?: Projects[];
+  images?: string[];
 }

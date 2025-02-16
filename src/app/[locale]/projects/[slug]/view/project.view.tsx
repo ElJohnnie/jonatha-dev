@@ -8,16 +8,7 @@ export default function ProjectView({ content }: Readonly<ProjectProps>) {
         <div className='grid grid-cols-1 gap-4 md:grid-cols-4'>
           <div className='md:col-span-3'>
             <div className='mx-2 max-w-full md:mx-auto md:max-w-screen-lg'>
-              <Markdown>{content.content}</Markdown>
-            </div>
-          </div>
-          <div className='md:col-span-1'>
-            <div className='mx-2 max-w-full md:mx-auto md:max-w-screen-md'>
-              <h3 className='mb-4 max-w-2xl text-3xl font-extrabold leading-none tracking-tight md:text-4xl dark:text-white'>
-                <span className='leading-12 block w-full bg-gradient-to-r from-slate-700 to-slate-500 bg-clip-text text-transparent lg:inline'>
-                  Artigos relacionados
-                </span>
-              </h3>
+              <Markdown>{content}</Markdown>
             </div>
           </div>
         </div>
