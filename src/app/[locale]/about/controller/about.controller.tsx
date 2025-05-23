@@ -1,10 +1,10 @@
 'use client';
-import AboutView from '../view/about.view';
-import { useTranslations } from 'next-intl';
 import {
-  CodeBracketSquareIcon,
   AcademicCapIcon,
+  CodeBracketSquareIcon,
 } from '@heroicons/react/20/solid';
+import { useTranslations } from 'next-intl';
+import AboutView from '../view/about.view';
 
 interface AboutProps {
   params: {
@@ -25,6 +25,11 @@ export default function AboutController({ params }: Readonly<AboutProps>) {
       name: 'Universidade de Santa Cruz do sul:',
       description: t('experience-1'),
       icon: AcademicCapIcon,
+    },
+    {
+      name: 'Villela Brasil Bank:',
+      description: t('experience-6'),
+      icon: CodeBracketSquareIcon,
     },
     {
       name: 'Software Devloper Full Stack, Vivo (Telefônica) B2C:',
