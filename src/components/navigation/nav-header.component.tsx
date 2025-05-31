@@ -1,12 +1,12 @@
 'use client';
-import { useState, useMemo } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Logo from '../../../public/JF.png';
-import { useTranslations, useLocale } from 'next-intl';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useMemo, useState } from 'react';
+import Logo from '../../../public/JF.png';
 import LangNavigation from './lang-navigation.component';
 
 function classNames(...classes: string[]) {
@@ -32,10 +32,16 @@ export default function NavHeader() {
         current: pathname?.includes(`/about`),
       },
       {
+        label: t('projects'),
+        href: `/${currentLocale}/projects`,
+        current: pathname?.includes(`/projects`),
+      },
+      {
         label: t('blog'),
         href: `/${currentLocale}/blog`,
         current: pathname?.includes(`/blog`),
       },
+
     ];
   }, [t, pathname, currentLocale]);
 
