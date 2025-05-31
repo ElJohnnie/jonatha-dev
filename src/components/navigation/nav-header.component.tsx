@@ -41,7 +41,6 @@ export default function NavHeader() {
         href: `/${currentLocale}/blog`,
         current: pathname?.includes(`/blog`),
       },
-
     ];
   }, [t, pathname, currentLocale]);
 
