@@ -1,11 +1,11 @@
 'use server';
 
-import { NotionDatabaseResponse } from './types';
 import NotionToMarkdownAdapter from '@/adapters/notion-to-markdown.adapter';
 import NotionConfig from '@/config/notion.config';
+import { NotionDatabaseResponse } from './types';
 
 const notionBlogConfig = new NotionConfig(
-  process.env.NOTION_DATABASE_PROJECT_ID ?? ''
+  process.env.NOTION_DATABASE_PROJECTS_ID ?? ''
 );
 
 export async function getAllProjects(): Promise<
