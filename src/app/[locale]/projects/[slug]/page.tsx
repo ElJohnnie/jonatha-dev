@@ -1,7 +1,11 @@
-import ProjectController from './controller/project.controller';
 import { getProject } from '@/services/notion-projects.service';
+import {
+  getAllImageUrls,
+  getFirstImageUrl,
+  removeImagesFromMarkdown,
+} from '@/utils/get-image-url.util';
 import { Metadata } from 'next';
-import { getFirstImageUrl } from '@/utils/get-image-url.util';
+import ProjectController from './controller/project.controller';
 
 interface PageProps {
   params: { slug: string; locale: string };
@@ -57,5 +61,9 @@ export default async function Page({ params }: Readonly<PageProps>) {
 
   const project = await getProject(slug, locale);
 
-  return <ProjectController content={project.content} />;
+  const content = removeImagesFromMarkdown(project.content);
+
+  const images = getAllImageUrls(project.content);
+
+  return <ProjectController images={images} content={content} />;
 }

@@ -19,6 +19,7 @@ export interface ProjectViewProp {
 }
 
 export interface ProjectProps {
+  images: any[];
   content: any;
 }
 
