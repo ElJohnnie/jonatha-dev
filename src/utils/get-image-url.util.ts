@@ -21,6 +21,6 @@ export function getAllImageUrls(markdown: string): string[] {
 
 export function removeImagesFromMarkdown(markdown: string): string {
   const imageRegex = /!\[.*?\]\((.*?)\)/g;
-  
+
   return markdown.replace(imageRegex, '');
 }

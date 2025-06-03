@@ -1,5 +1,9 @@
 import { getProject } from '@/services/notion-projects.service';
-import { getAllImageUrls, getFirstImageUrl, removeImagesFromMarkdown } from '@/utils/get-image-url.util';
+import {
+  getAllImageUrls,
+  getFirstImageUrl,
+  removeImagesFromMarkdown,
+} from '@/utils/get-image-url.util';
 import { Metadata } from 'next';
 import ProjectController from './controller/project.controller';
 

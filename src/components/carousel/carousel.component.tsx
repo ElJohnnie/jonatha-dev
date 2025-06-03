@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 type ImageCarouselProps = {
   images: string[];
@@ -19,25 +19,25 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
   useEffect(() => {
     const timer = setInterval(next, 7000);
     return () => clearInterval(timer);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="relative w-full max-w-[1440px] mx-auto">
-      <div className="relative w-full pb-[75%] overflow-hidden rounded-2xl shadow-lg">
+    <div className='relative mx-auto w-full max-w-[1440px]'>
+      <div className='relative w-full overflow-hidden rounded-2xl pb-[75%] shadow-lg'>
         {images.map((src, idx) => (
           <div
             key={idx}
             className={`absolute inset-0 transition-opacity duration-700 ease-out ${
-              idx === current ? "opacity-100 visible" : "opacity-0 invisible"
+              idx === current ? 'visible opacity-100' : 'invisible opacity-0'
             }`}
           >
             <Image
               src={src}
               alt={`Slide ${idx + 1}`}
               fill
-              className="object-contain"
-              sizes="(max-width: 640px) 100vw, 800px"
+              className='object-contain'
+              sizes='(max-width: 640px) 100vw, 800px'
             />
           </div>
         ))}
@@ -45,25 +45,25 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
 
       <button
         onClick={prev}
-        className="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow transition-opacity duration-300"
+        className='absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow transition-opacity duration-300 hover:bg-white'
       >
         &#8592;
       </button>
 
       <button
         onClick={next}
-        className="absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 hover:bg-white rounded-full p-2 shadow transition-opacity duration-300"
+        className='absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-white/70 p-2 shadow transition-opacity duration-300 hover:bg-white'
       >
         &#8594;
       </button>
 
-      <div className="flex justify-center gap-2 mt-4">
+      <div className='mt-4 flex justify-center gap-2'>
         {images.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              idx === current ? "bg-gray-600" : "bg-gray-300"
+            className={`h-3 w-3 rounded-full transition-colors duration-300 ${
+              idx === current ? 'bg-gray-600' : 'bg-gray-300'
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
