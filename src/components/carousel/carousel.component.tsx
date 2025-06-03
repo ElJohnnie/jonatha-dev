@@ -37,7 +37,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
               alt={`Slide ${idx + 1}`}
               fill
               className='object-contain'
-              sizes='(max-width: 640px) 100vw, 800px'
+              sizes='(max-width: 720px) 100vw, 800px'
             />
           </div>
         ))}
