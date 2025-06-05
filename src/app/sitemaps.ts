@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 
 export default async function sitemap() {
   const langs = Object.keys(languages);
-  const pages = ['about', 'blog', "projects"];
+  const pages = ['about', 'blog', 'projects'];
   const host = process.env.NEXT_PUBLIC_LOCAL_DOMAIN;
 
   let routes: MetadataRoute.Sitemap = [];
