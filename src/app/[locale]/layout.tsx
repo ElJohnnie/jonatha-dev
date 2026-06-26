@@ -1,10 +1,10 @@
-import NavHeader from '@/components/navigation/nav-header.component';
-import { NextIntlClientProvider, useLocale } from 'next-intl';
-import { notFound } from 'next/navigation';
 import Footer from '@/components/footer/footer.component';
-import type { Metadata } from 'next';
+import NavHeader from '@/components/navigation/nav-header.component';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import type { Metadata } from 'next';
+import { NextIntlClientProvider, useLocale } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 interface LocaleLayout {
   children: React.ReactNode;
@@ -19,7 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const siteName = 'Jonatha Dev';
 
   return {
-    metadataBase: new URL('https://jonathadev.vercel.app/'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_LOCAL_DOMAIN || 'https://jonathadev.com.br'),
     title,
     description,
     verification: {
@@ -28,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: 'https://jonathadev.vercel.app/',
+      url: process.env.NEXT_PUBLIC_LOCAL_DOMAIN || 'https://jonathadev.com.br',
       siteName,
       images: [
         {

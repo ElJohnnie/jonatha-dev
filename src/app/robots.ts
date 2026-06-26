@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
     },
-    sitemap: `${process.env.NEXT_PUBLIC_LOCAL_DOMAIN}/sitemap.xml`,
-    host: process.env.NEXT_PUBLIC_LOCAL_DOMAIN,
+    sitemap: `${process.env.NEXT_PUBLIC_LOCAL_DOMAIN}/sitemap.xml` || 'https://jonathadev.com.br/sitemap.xml',
+    host: process.env.NEXT_PUBLIC_LOCAL_DOMAIN || 'https://jonathadev.com.br',
   };
 }
