@@ -19,7 +19,9 @@ export async function generateMetadata(): Promise<Metadata> {
   const siteName = 'Jonatha Dev';
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_LOCAL_DOMAIN || 'https://jonathadev.com.br'),
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_LOCAL_DOMAIN || 'https://jonathadev.com.br'
+    ),
     title,
     description,
     verification: {
