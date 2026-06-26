@@ -16,7 +16,7 @@ export default function HomeView({
       {image && (
         <div>
           <Image
-            src={'/images/jonatha.png'}
+            src={'/images/jonatha-2.jpeg'}
             alt='profile'
             width={200}
             height={200}

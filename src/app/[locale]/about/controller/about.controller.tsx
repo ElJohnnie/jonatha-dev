@@ -27,6 +27,11 @@ export default function AboutController({ params }: Readonly<AboutProps>) {
       icon: AcademicCapIcon,
     },
     {
+      name: 'Software House - Full Stack Developer:',
+      description: t('experience-7'),
+      icon: CodeBracketSquareIcon,
+    },
+    {
       name: 'Villela Brasil Bank:',
       description: t('experience-6'),
       icon: CodeBracketSquareIcon,
