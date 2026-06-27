@@ -1,6 +1,5 @@
-import React from 'react';
-import { AboutViewProps } from '../types';
 import Image from 'next/image';
+import { AboutViewProps } from '../types';
 
 export default function AboutView({
   title,
@@ -16,7 +15,7 @@ export default function AboutView({
           {image && (
             <div className='top-[12vh] hidden h-auto place-self-start md:fixed lg:mt-0 lg:flex'>
               <Image
-                src={'/images/jonatha.png'}
+                src={'/images/jonatha-2.jpeg'}
                 alt='profile'
                 width={550}
                 height={550}

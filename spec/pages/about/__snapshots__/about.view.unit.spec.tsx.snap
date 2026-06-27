@@ -19,8 +19,8 @@ exports[`should render correctly About component match snapshot 1`] = `
           decoding="async"
           height="550"
           loading="lazy"
-          src="/_next/image?url=%2Fimages%2Fjonatha.png&w=1200&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fjonatha.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fjonatha.png&w=1200&q=75 2x"
+          src="/_next/image?url=%2Fimages%2Fjonatha-2.jpeg&w=1200&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fjonatha-2.jpeg&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fjonatha-2.jpeg&w=1200&q=75 2x"
           style="color: transparent;"
           width="550"
         />
